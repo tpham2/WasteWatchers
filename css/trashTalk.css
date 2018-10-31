@@ -4,3 +4,6 @@ body {
   border: 1px dotted gray;
   padding: 20px;
 }
+.container {
+  border: 1px solid #C4C4C4;
+}
