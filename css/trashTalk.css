@@ -1,0 +1,31 @@
+/* Contains the classes for app -->*/
+.nav-tabs {
+  border: 1px solid #C4C4C4;
+  width: 1440;
+}
+.individual-tab {
+  width: 164px;
+  height: 37px;
+  padding-left: 90px;
+  padding-right: 90px;
+  y: 195px;
+}
+.shelf-life{
+  x: 315px;
+}
+.nutrition {
+  x: 569px;
+}
+.compost{
+  x: 823px;
+}
+.redeem{
+  x: 1077
+}
+.announcements {
+
+}
+body {
+  border: 1px dotted gray;
+  padding: 20px;
+}
