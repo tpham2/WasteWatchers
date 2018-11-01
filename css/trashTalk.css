@@ -1,14 +1,22 @@
 /* Contains the classes for app -->*/
 .nav-tabs {
   border: 1px solid #C4C4C4;
-  width: 1440;
+  border: 1168px;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
 }
 .individual-tab {
   width: 164px;
   height: 37px;
+  font-size: large;
   padding-left: 90px;
-  padding-right: 90px;
   y: 195px;
+  text-align: center;
+}
+.home{
+  x: 195;
 }
 .shelf-life{
   x: 315px;
