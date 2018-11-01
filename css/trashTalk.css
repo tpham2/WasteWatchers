@@ -12,28 +12,29 @@ h1 {
   height: 37px;
   font-size: large;
   padding-left: 90px;
+  color: inherit;
   y: 195px;
   text-align: center;
 }
 .home{
-  x: 195;
+  x: 195px;
 }
 .shelf-life{
   x: 315px;
 }
-.nutrition {
+.help {
   x: 569px;
 }
 .compost{
   x: 823px;
 }
 .redeem{
-  x: 1077
+  x: 1077px;
 }
 .announcements {
 
 }
-body {
-  border: 1px dotted gray;
-  padding: 20px;
+.title {
+  background-color: green;
+  padding: 10px;
 }
