@@ -8,52 +8,80 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
 </head>
-
+<!-- This will be the apps title banner and tabs-->
 <body>
   <div class="container-fluid title">
     <h1>Trash Talk</h1>
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="individual-tab home active"><a href="home_page.html">Home</a></li>
-      <li class="individual-tab shelf-life"><a href="shelf_life.html">Shelf Life</a></li>
-      <li class="individual-tab compost"><a href="#">Compost</a></li>
-      <li class="individual-tab redeem"><a href="#">Redeem</a></li>
-      <li class="individual-tab help"><a href="#">Help</a></li>
+    <nav class="navbar navbar-expand-lg bg-green">
+    <ul class="navbar-nav">
+      <li class="individual-tab home active"><a style="color: black;"
+        href="home_page.html">Home</a></li>
+      <li class="individual-tab shelf-life"><a style="color: black;"
+        href="shelf_life.html">Shelf Life</a></li>
+      <li class="individual-tab compost"><a style="color: black;"
+        href="#">Compost</a></li>
+      <li class="individual-tab redeem"><a style="color: black;"
+        href="#">Redeem</a></li>
+      <li class="individual-tab help"><a style="color: black;"
+        href="#">Help</a></li>
     </ul>
-  <div class="tab-content">
-    <div class="tab-pane fade in active">
-      <a href="home_page.html">
-        <!--<img src="images/">-->
-      </a>
-    </div>
-    <div class="tab-pane fade">
-      <a href="shelf_life.html"></a>
-    </div>
-    <div class="tab-pane fade">
-      <a href="#"></a>
-    </div>
-    <div class="tab-pane fade">
-      <a href="#"></a>
-    </div>
-    <div class="tab-pane fade">
-      <a href="#"></a>
+    <form class="form-inline individual-tab" action="/action_page.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
+  </nav>
+<!-- These are the links for the tabs -->
+    <div class="tab-content">
+      <div class="tab-pane fade in active">
+        <a href="home_page.html">
+          <!--<img src="images/">-->
+        </a>
+      </div>
+      <div class="tab-pane fade">
+        <a href="shelf_life.html"></a>
+      </div>
+      <div class="tab-pane fade">
+        <a href="#"></a>
+      </div>
+      <div class="tab-pane fade">
+        <a href="#"></a>
+      </div>
+      <div class="tab-pane fade">
+        <a href="#"></a>
+      </div>
     </div>
   </div>
-</div>
 </body>
-
+<br>
+<!-- This is the box that contains the announcements -->
 <body>
-<div class="announcements">
-<div class="announcement_content">
-  <a href="#"></a>
-</div>
-</div>
+  <div class="container-fluid" style="margin-left: 10px;">
+    <div class="announcement_content column left">
+      <h5 style="text-align: center;">Announcements</h5>
+      <!-- First box -->
+      <div class="">
+        <a href="#"></a>
+      </div>
+      <br>
+      <!-- Second box -->
+      <div class="">
+        <a href="#"></a>
+      </div>
+    </div>
+    <!-- This is the box that contains the store locator -->
+    <div class="store_locator column right" style="margin-left: 20px;">
+      <h5 style="text-align: center;">Store Locator</h5>
+      <div class="store_map">
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
