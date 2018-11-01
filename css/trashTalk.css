@@ -1,6 +1,6 @@
 /* Contains the classes for app -->*/
 .banner {
-  height: 150px;
+  height: 140px;
   padding: 10px;
   border-bottom: solid gray;
 }
@@ -8,12 +8,11 @@
 h1 {
   text-align: center;
   font-size: 3rem;
-  padding-top: 10px;
-  border-bottom: solid gray;
+  padding: 10px;
 }
 
-.nav-tabs {
-
+.tabsbar {
+  border-bottom: solid gray;
 }
 
 .individual-tab {
@@ -21,6 +20,10 @@ h1 {
   padding-left: 125px;
   color: inherit;
   text-align: center;
+}
+
+.active{
+  border-bottom: 5px solid green;
 }
 
 .home{
@@ -63,8 +66,14 @@ h1 {
   border: 1px solid black;
 }
 
+.carousel-inner > .item > img,
+.carousel-innter > .item > a >img {
+  width: 70%;
+  margin: auto;
+}
+
 .store_locator {
-padding: 30px;
-height: 600px;
-border: 1px solid black;
+  padding: 30px;
+  height: 600px;
+  border: 1px solid black;
 }
