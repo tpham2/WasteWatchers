@@ -1,18 +1,19 @@
 /* Contains the classes for app -->*/
-.title {
-  background-color: green;
+.banner {
+  height: 150px;
   padding: 10px;
-  border-bottom: solid black;
+  border-bottom: solid gray;
 }
 
 h1 {
   text-align: center;
   font-size: 3rem;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: solid gray;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid green;
+
 }
 
 .individual-tab {
@@ -56,15 +57,14 @@ h1 {
 }
 
 .announcement_content {
-  background-color: green;
+  background-color: gray;
   padding: 30px;
-  height: 650px;
+  height: 600px;
   border: 1px solid black;
 }
 
 .store_locator {
-background-color: green;
 padding: 30px;
-height: 650px;
+height: 600px;
 border: 1px solid black;
 }
