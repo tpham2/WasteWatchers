@@ -23,7 +23,7 @@ h1 {
 }
 
 .active{
-  border-bottom: 5px solid green;
+  border-bottom: 5px solid rgba(70, 168, 24, 0.57);
 }
 
 .home{
