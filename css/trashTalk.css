@@ -17,9 +17,22 @@ h1 {
 
 .individual-tab {
   font-size: large;
-  padding-left: 125px;
+  padding: 5px 55px;
   color: inherit;
   text-align: center;
+}
+
+.btn-home {
+    background-color: white; /* Blue background */
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    padding: 0px 15px; /* Some padding */
+    font-size: 25px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.active-home{
+  border-bottom: 5px solid rgba(70, 168, 24, 0.57);
 }
 
 .active{
@@ -27,7 +40,7 @@ h1 {
 }
 
 .home{
-  
+
 }
 
 .shelf-life{
