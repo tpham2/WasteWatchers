@@ -99,7 +99,7 @@ h1 {
     float:left;
     width: 70%;
 }
- form.search button {
+form.search button {
     float: left;
     width: 20%;
     padding: 4px;
@@ -109,7 +109,7 @@ h1 {
     border: 0px solid grey;
     cursor: pointer;
 }
- form.search button:hover {
+form.search button:hover {
     background: #46A818;
 }
  .active-home{
@@ -118,18 +118,10 @@ h1 {
  .active{
   border-bottom: 5px solid rgba(70, 168, 24, 0.57);
 }
-@@ -95,11 +54,6 @@ form.search button:hover {
-  width: 70%;
-}
+
  /* Column alighment for shelf life search */
 .column.left2 {
   width: 21%;
-}
- .column.right {
-   width: 25%;
-@@ -123,25 +77,3 @@ form.search button:hover {
-  height: 600px;
-  border: 1px solid black;
 }
 
 .shelf_life_search{
