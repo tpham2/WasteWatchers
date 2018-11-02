@@ -13,6 +13,8 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <!-- This will be the apps title banner and tabs-->
 <body>
@@ -36,9 +38,9 @@
       <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
       </li>
     </ul>
-    <form class="form-inline individual-tab" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="SEARCH SITE">
-      <button class="btn btn-success" type="submit">Search</button>
+    <form class="search" action="action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </nav>
 <!-- These are the links for the tabs -->

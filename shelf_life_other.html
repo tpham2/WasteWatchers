@@ -14,19 +14,36 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid banner">
     <h1>Waste Watcher</h1>
-  <div class="tabs">
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="home_page.html">Home</a></li>
-      <li><a href="shelf_life.html">Shelf Life</a></li>
-      <li><a href="#">Nutrition</a></li>
-      <li><a href="#">Compost</a></li>
-      <li><a href="#">Redeem</a></li>
+  </div>
+  <div class="container-fluid tabsbar">
+    <nav class="navbar navbar-expand-lg">
+    <ul class="nav navbar-nav">
+      <li class="individual-tab home"><a style="color: black;" href="home_page.html">Home</a>
+      </li>
+      <li class="individual-tab shelf-life"><a data-toggle="tab" class="active show" style="color: black;"
+        href="shelf_life.html">Shelf Life</a>
+      </li>
+      <li class="individual-tab compost"><a style="color: black;"
+        href="compost.html">Compost</a>
+      </li>
+      <li class="individual-tab redeem"><a style="color: black;"
+        href="redeem.html">Redeem</a>
+      </li>
+      <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
+      </li>
     </ul>
+    <form class="search" action="action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
   <br>
   <p>This page will have Shelf Life of Other products</p>
