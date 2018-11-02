@@ -18,7 +18,7 @@ h1 {
 .individual-tab {
   font-size: large;
   width: 180px;
-  padding: 0% 3% 0 5%;
+  padding: 0% 3% 0% 5%;
   color: inherit;
   text-align: center;
 }
@@ -59,7 +59,9 @@ h1 {
 
   width: 25%;
 }
-
+.announcement_images{
+  align-content: center;
+}
 .announcement_content {
   background-color: gray;
   padding: 30px;
@@ -68,7 +70,7 @@ h1 {
 }
 
 .carousel-inner > .item > img,
-.carousel-innter > .item > a >img {
+.carousel-inner > .item > a >img {
   width: 70%;
   margin: auto;
 }
@@ -86,6 +88,7 @@ h1 {
     padding: 0 4px; /* Some padding */
     font-size: 25px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
+
 }
  form.search input[type=text] {
     padding: 3px;
