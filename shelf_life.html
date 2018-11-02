@@ -8,6 +8,8 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+
   <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
@@ -42,6 +44,7 @@
       <button class="btn btn-success" type="submit">Search</button>
     </form>
   </nav>
+</div>
 
   <div class="tab-content">
     <div class="tab-pane fade" id="home">
@@ -62,6 +65,7 @@
       <a href="help.html"></a>
     </div>
   </div>
+
 </body>
 <body>
 <p>This will be the Shelf Life page
@@ -70,7 +74,7 @@
     <li><a href="dairy.html">Dairy</a></li>
     <li><a href="protein.html">Protein</a></li>
     <li><a href="shelf_life_other.html">Other</a></li>
-  </ul> -->
+  </ul>
 
     <div class="row">
       <div class="col-sm-3" style="background-color:lightyellow;">Search</div>
@@ -81,9 +85,20 @@
       <div class="col-sm-3" style="background-color:lightyellow;">Recently Viewed</div>
       <div class="col-sm-4" style="background-color:lightyellow;"><a href="protein.html">Protein</a></div>
       <div class="col-sm-4" style="background-color:lightyellow;"><a href="shelf_life_other.html">Other</a></div>
-    </div>
+    </div> -->
+    <div class="shelf_life_search column left2" style="margin-left: 30px;">
+      <br>
+      <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text"
+          placeholder="Search...">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
 </p>
 </div>
+<div class="shelf_categories categories_style" ><a href="produce.html">PRODUCE</div>
+<div class="shelf_categories categories_style"><a href="protein.html">PROTEIN</div>
+<div class="shelf_categories categories_style"><a href="dairy.html">DAIRY</div>
+<div class="shelf_categories categories_style"><a href="shelf_life_other.html">OTHER</div>
 </body>
 
 </html>

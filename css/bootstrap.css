@@ -2247,9 +2247,17 @@ textarea.form-control {
     align-items: center;
     margin-bottom: 0;
   }
+/*Nav bar search width
+  .form-inline-SEARCH .form-control {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
+  } */
+
+/* Store locator search width */
   .form-inline .form-control {
     display: inline-block;
-    width: 185px;
+    width: 150px;
     vertical-align: middle;
   }
   .form-inline .form-control-plaintext {
