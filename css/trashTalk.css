@@ -18,18 +18,45 @@ h1 {
 .individual-tab {
   font-size: large;
   width: 180px;
-  padding: 5px 10px;
+  padding: 0% 3% 0 5%;
   color: inherit;
   text-align: center;
 }
 
 .btn-home {
-    background-color: white; /* Blue background */
-    border: none; /* Remove borders */
+    background-color: white; /* White background */
+    border: 0px; /* Remove borders */
     color: black; /* White text */
-    padding: 0px 15px; /* Some padding */
+    padding: 0 4px; /* Some padding */
     font-size: 25px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
+}
+
+form.search input[type=text] {
+    padding: 3px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 10%;
+    float:left;
+    width: 70%;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 4px;
+    background: none;
+    color: black;
+    font-size: 17px;
+    border: 0px solid grey;
+    cursor: pointer;
+}
+
+form.search button:hover {
+    background: #46A818;
 }
 
 .active-home{
