@@ -1,55 +1,112 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Home Page</title>
+	<title>Home Page</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+-->
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkm4ds0F2RrYg5nnw5DW5DYT59gicMqTk&callback=initMap" async defer></script>
 
   <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
+
 
 </head>
-<!-- This will be the apps title banner and tabs-->
+
+
 <body>
-  <div class="container-fluid banner">
-    <h1>Waste Watcher</h1>
+
+  <div class="w3-container w3-card" style="background: #f8f9fa; padding: 2px;">
+    <p>WasteWatcher</p>
+
+      <div id="wrap">
+        <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="SEARCH...">
+        <input id="search_submit" value="Rechercher" type="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </form>
+      </div>
   </div>
-  <div class="container-fluid tabsbar">
-    <nav class="navbar navbar-expand-lg">
-    <ul class="nav navbar-nav">
-      <li class="individual-tab home"><a data-toggle="tab"
-        class="active-home show" href="home_page.html">
-        <button class="btn-home"><i class="fa fa-home"></i></button></a>
-      </li>
-      <li class="individual-tab shelf-life"><a style="color: black;"
-        href="shelf_life.html">Shelf Life</a>
-      </li>
-      <li class="individual-tab compost"><a style="color: black;"
-        href="compost.html">Compost</a>
-      </li>
-      <li class="individual-tab redeem"><a style="color: black;"
-        href="redeem.html">Redeem</a>
-      </li>
-      <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
-      </li>
-    <li><form class="search" action="action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </li>
-</ul>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs active" href="home_page.html"><img src="images/home-green.png"><br>Home</a>
+    <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
   </nav>
 
-<!-- These are the links for the tabs -->
+
+  <br>
+
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/baby_pumpkins.jpg" alt="Baby Pumpkins" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="images/big_pumpkins.jpg" alt="Big Pumpkins" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="images/more_pumpkins.jpg" alt="More Pumpkins" style="width:100%;">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div id="map"></div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- These are the links for the tabs
     <div class="tab-content">
       <div class="tab-pane fade in active">
         <a href="home_page.html"></a>
@@ -67,11 +124,12 @@
         <a href="help.html"></a>
       </div>
     </div>
-  </div>
 
 </body>
 <br>
-<!-- This is the box that contains the announcements -->
+-->
+
+<!-- This is the box that contains the announcements
 <body>
   <div class="container-fluid" style="margin-left: 20px;">
     <div class="announcement_content column left">
@@ -118,11 +176,13 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>-->
 </div>
 </div>
+</div>
+-->
 
-    <!-- This is the box that contains the store locator -->
+
+    <!-- This is the box that contains the store locator
     <div class="store_locator column right" style="margin-left: 30px;">
       <h5 style="text-align: left;">Store Locator</h5>
       <br>
@@ -141,3 +201,5 @@
 </body>
 
 </html>
+
+-->

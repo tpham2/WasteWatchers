@@ -1,15 +1,150 @@
-/* Contains the classes for app -->*/
+
+
+
+p {
+  margin-top: 11px;
+  padding-left: 8px;
+  font-family: 'Covered By Your Grace';
+  font-size: 25px;
+}
+
+.box_shadow {
+  box-shadow: 0px 0px 10px 0px #C4C4C4;
+  z-index: -1;
+}
+
+.tabs {
+  padding: 3px;
+}
+
+a {
+  font-family: 'Barlow Semi Condensed';
+}
+
+#searchbtn {
+  position: relative;
+  top: 3px;
+  right: 8px;
+  z-index: 4;
+}
+
+#wrap {
+  margin: 0px 30px;
+  display: inline-block;
+  position: relative;
+  height: 0px;
+  float: right;
+  top: 18px;
+  padding: 0px;
+  position: absolute;
+  right: 0px;
+}
+
+input[type="text"] {
+  height: 27px;
+  font-size: 13px;
+  display: inline-block;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 2px;
+  padding-right: 50px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f8f9fa;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 170px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+
+input[type="submit"] {
+  height: 25px;
+  width: 30px;
+  display: inline-block;
+  color:black;
+  float: right;
+  text-indent: -1000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  background: #46A818;
+}
+
+input[type="submit"]:hover {
+  background: none;
+}
+
+
+
+#map {
+   height: 35%;
+   width: 80%;
+ }
+
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 4px 10px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: White;
+}
+
+.navbar a.active {
+  color: #46A818;
+  box-shadow: 0px 0px 10px 0px #C4C4C4;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+
+
+/* Contains the classes for app
 .banner {
   height: 140px;
   padding: 10px;
   border-bottom: solid gray;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  padding: 10px;
-}
+
 
 .tabsbar {
   border-bottom: solid gray;
@@ -82,45 +217,24 @@ h1 {
 }
 
 .btn-home {
-    background-color: white; /* White background */
-    border: 0px; /* Remove borders */
-    color: black; /* White text */
-    padding: 0 4px; /* Some padding */
-    font-size: 25px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    background-color: white; /* White background
+    border: 0px; /* Remove borders
+    color: black; /* White text
+    padding: 0 4px; /* Some padding
+    font-size: 25px; /* Set a font size
+    cursor: pointer; /* Mouse pointer on hover
 
 }
- form.search input[type=text] {
-    padding: 3px;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-left: 10%;
-    float:left;
-    width: 70%;
-}
-form.search button {
-    float: left;
-    width: 20%;
-    padding: 4px;
-    background: none;
-    color: black;
-    font-size: 17px;
-    border: 0px solid grey;
-    cursor: pointer;
-}
-form.search button:hover {
-    background: #46A818;
-}
+
  .active-home{
   border-bottom: 5px solid rgba(70, 168, 24, 0.57);
 }
  .active{
   border-bottom: 5px solid rgba(70, 168, 24, 0.57);
 }
- /* Column alighment for shelf life search */
+
+
+ Column alighment for shelf life search
 .column.left2 {
   width: 21%;
 }
@@ -143,3 +257,4 @@ form.search button:hover {
   padding: 17% 2% 0 0;
   text-align: right;
 }
+*/
