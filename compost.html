@@ -15,14 +15,34 @@
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
 
 </head>
 <!-- This will be the apps title banner and tabs-->
 <body>
 
-  <div class="w3-container w3-card" style="background: #f8f9fa">
-    <h1>Waste Watcher</h1>
+  <div class="w3-container w3-card" style="background: #f8f9fa; padding: 2px;">
+    <p>WasteWatcher</p>
+
+      <div id="wrap">
+        <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="SEARCH...">
+        <input id="search_submit" value="Rechercher" type="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </form>
+      </div>
   </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs active" href="home_page.html"><img src="images/home-green.png"><br>Home</a>
+    <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
+  </nav>
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
     <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>

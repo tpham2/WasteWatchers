@@ -21,6 +21,19 @@ a {
   font-family: 'Barlow Semi Condensed';
 }
 
+.store_group {
+  position: absolute;
+  left: 10px;
+  border: 1px solid gray;
+  height: 240px;
+  width: 350px;
+}
+
+.store_locator {
+  position: fixed;
+  left: 15px;
+}
+
 #searchbtn {
   position: relative;
   top: 3px;
@@ -49,13 +62,12 @@ input[type="text"] {
   border: none;
   outline: none;
   color: black;
-  padding: 2px;
-  padding-right: 50px;
+  padding-right: 40px;
   width: 40px;
   position: absolute;
   top: 0;
   right: 0;
-  background: #f8f9fa;
+  background: none;
   z-index: 3;
   transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
   cursor: pointer;
@@ -66,14 +78,14 @@ input[type="text"]:focus:hover {
 }
 
 input[type="text"]:focus {
-  width: 170px;
+  width: 130px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
 
 input[type="submit"] {
-  height: 25px;
+  height: 27px;
   width: 30px;
   display: inline-block;
   color:black;
@@ -88,7 +100,7 @@ input[type="submit"] {
   opacity: 0.4;
   cursor: pointer;
   transition: opacity .4s ease;
-  background: #46A818;
+  background: white;
 }
 
 input[type="submit"]:hover {
@@ -97,16 +109,24 @@ input[type="submit"]:hover {
 
 
 
-#map {
-   height: 35%;
-   width: 80%;
- }
+.mapouter{
+  text-align:right;height:50px;width:60px;
+  }
+
+.gmap_canvas {
+  overflow:hidden;
+  margin-left: 2px;
+  background:none!important;
+  height:250px;
+  width:345px;
+  }
+
 
 
 .navbar {
   overflow: hidden;
   background-color: white;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -116,7 +136,7 @@ input[type="submit"]:hover {
   display: block;
   color: black;
   text-align: center;
-  padding: 4px 10px;
+  padding: 3px 10px;
   text-decoration: none;
   font-size: 13px;
 }
@@ -133,9 +153,153 @@ input[type="submit"]:hover {
 
 .main {
   padding: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
+
+
+
+    .login-wrap{
+    	width:100%;
+    	margin:auto;
+    	max-width:525px;
+    	min-height:670px;
+    	position:relative;
+    }
+
+    .login-html{
+    	width:100%;
+    	height:100%;
+    	position:absolute;
+    	padding:120px 70px 50px 70px;
+    	background: rgba(70, 168, 24, 0.5);
+    }
+
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm{
+    	top: 10px;
+    	left:0;
+    	right:0;
+    	bottom:0;
+    	position:absolute;
+    	transform:rotateY(180deg);
+    	backface-visibility:hidden;
+    	transition:all .4s linear;
+    }
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group .check{
+    	display:none;
+    }
+    .login-html .tab,
+    .login-form .group .label,
+    .login-form .group .button{
+    	text-transform:uppercase;
+    }
+    .login-html .tab{
+      font-family: "Barlow Semi Condensed";
+    	font-size:22px;
+    	margin-right:15px;
+    	padding-bottom:5px;
+    	margin:0 15px 10px 0;
+    	display:inline-block;
+    	border-bottom:2px solid transparent;
+    }
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab{
+    	color:white;
+    	border-color:black;
+    }
+    .login-form{
+    	min-height:350px;
+    	position:relative;
+    	perspective:1000px;
+    	transform-style:preserve-3d;
+    }
+    .login-form .group{
+    	margin-bottom:15px;
+    }
+    .login-form .group .label,
+    .login-form .group .input,
+    .login-form .group .button{
+    	width:100%;
+    	color: black;
+    	display: inline-block;
+      background: none;
+    }
+    .login-form .group .input,
+    .login-form .group .button{
+    	border:none;
+    	padding:10px 20px;
+      background: rgba(255,255,255,.1);
+    }
+    .login-form .group input[data-type="password"]
+    {
+    	text-security:circle;
+    	-webkit-text-security:circle;
+    }
+    .login-form .group .label{
+    	color:black;
+      font-family: "Barlow Semi Condensed";
+    	font-size:12px;
+    }
+    .login-form .group .button{
+      background: none;
+    }
+    .login-form .group label .icon{
+    	width:15px;
+    	height:15px;
+    	position:relative;
+    	display:inline-block;
+    	background:rgba(255,255,255,.1);
+    }
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after{
+    	content:'';
+    	width:10px;
+    	height:2px;
+    	background:#fff;
+    	position:absolute;
+    	transition:all .2s ease-in-out 0s;
+    }
+    .login-form .group label .icon:before{
+    	left:3px;
+    	width:5px;
+    	bottom:4px;
+    	transform:scale(0) rotate(0);
+    }
+    .login-form .group label .icon:after{
+    	top:6px;
+    	right:0;
+    	transform:scale(0) rotate(0);
+    }
+    .login-form .group .check:checked + label{
+    	color:#fff;
+    }
+    .login-form .group .check:checked + label .icon{
+    	background:#1161ee;
+    }
+    .login-form .group .check:checked + label .icon:before{
+    	transform:scale(1) rotate(45deg);
+    }
+    .login-form .group .check:checked + label .icon:after{
+    	transform:scale(1) rotate(-45deg);
+    }
+    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    	transform:rotate(0);
+    }
+    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    	transform:rotate(0);
+    }
+
+    .hr{
+    	height:2px;
+    	margin:60px 0 50px 0;
+    	background:rgba(255,255,255,.2);
+    }
+    .foot-lnk{
+    	text-align:center;
+    }
 
 /* Contains the classes for app
 .banner {
