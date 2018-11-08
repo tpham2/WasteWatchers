@@ -384,7 +384,7 @@ input[type="submit"]:hover {
       margin-top: 0px;
       font-family: "Barlow Semi Condensed";
     }
-
+/* shelf life */
  .shelf_categories{
   margin:45px 10px 0px 15px;
   float: left;
@@ -405,12 +405,80 @@ input[type="submit"]:hover {
    padding: 0px 0px;
    width: 100%;
  }
+/* within each shelf life content page */
+ .shelfImage{
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px;
+   width: 80%;
+ }
+.shelfContent{
+  font-family: "Roboto";
+  margin-left: 40px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
+}
+.cfLife{
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  margin-right:5px;
+  letter-spacing: .6px;
+}
+
+/* produce page */
+ .produce_categories{
+  margin:40px 10px 0px 38px;
+  float: left;
+  clear:none;
+  width:300px;
+  height:150px;
+  background-color: rgba(69, 99, 71, 1);
+  border:2px solid #808080;
+  padding: 45px 0px;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+ /* fruit life */
+  .fruit_categories{
+   margin:10px 0px 10px 18px;
+   float: left;
+   clear:none;
+   width:160px;
+   height:160px;
+   border: 0px solid #808080;
+   background: #f1f1f1;
+   box-shadow: 2px 5px rgba(70, 168, 24, 0.5);
+   padding: 0px 0px;
+ }
+  .fruit_text{
+   color: black;
+   font-size: 22px;
+   margin: 0px 0px 0px 10px;
+   padding: 0px 0px;
+   float: left;
+ }
+  .fruitPicture{
+    margin: 10px 0px 0px 15px;
+    padding: 0px 0px;
+    width: 70%;
+  }
+  .Title{
+    font-family:"Barlow Semi Condensed";
+    font-size: 22px;
+    margin: 0px 30px;
+    text-align: center;
+  }
+
  .Header{
    font-family: "Barlow Semi Condensed";
-   font-size: 20px;
+   font-size: 25px;
    font-weight: bold;
-   margin: 0px;
-   padding: 20px;
+   margin: 20px 30px 0px 30px;
+   padding-top: 20px;
  }
  .redeemCoins{
    font-family: "Barlow Semi Condensed";
@@ -469,38 +537,31 @@ input[type="submit"]:hover {
 .owl-nav .owl-next {
   right: -30px;
 }
-.popUpHeading{
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-}
-.modal-sm{
-  margin: 150px 0px 0px 40px;
-  width: 300px;
-}
 
-#tags {
-  background: #f1f1f1;
-  border: none;
-  margin: 10px 30px;
-  height: 30px;
-  width: 200px;
+.profileList li{
+  margin: 5px 0px 0px 0px;
   font-family: "Barlow Semi Condensed";
-  font-size: 15px;
-}
-
-.form-line-active input:focus{
-  outline-color: #46A818;
-}
-
-.done {
-  font-size: 18px;
-  color: #46A818;
-  background: #c4c4c4;
-}
-.cancel {
-  font-size: 15px;
-  position: relative;
+  font-size: 25px;
+  display: table;
+  width: 300px;
+  height: 5px;
   float: left;
-  margin-right: 100px;
+  border-top:1px solid rgba(70, 168, 24, 0.5);
+  border-bottom:1px solid rgba(70, 168, 24, 0.5);
+}
+.profileArrow{
+  margin-top: 7px;
+  margin-right: 10px;
+  float: right;
+  width: 5%;
+}
+.appleList li{
+  margin: 5px 0px 0px 0px;
+  padding-right: 20px;
+  font-family: "Roboto";
+  font-size: 15px;
+  display: table;
+  width: 300px;
+  height: 5px;
+  border-bottom:1px solid rgba(70, 168, 24, 0.5);
 }
