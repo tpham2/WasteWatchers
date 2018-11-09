@@ -483,10 +483,27 @@ input[type="submit"]:hover {
  .redeemCoins{
    font-family: "Barlow Semi Condensed";
    font-size: 20px;
-   margin: 100px 0px 0px 35px;
+   margin: 0px 0px 0px 0px;
+   padding: 10px;
+   padding-top: 25px;
  }
-
-
+.col-xs-3{
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left:5px;
+ }
+.carousel-control.right{
+  background-image: none;
+  margin-right: -15px;
+}
+.carousel-control.left{
+  background-image: none;
+  margin-left: -15px;
+}
+.glyphicon{
+  color: black;
+  opacity: solid;
+}
  .carousel-wrap {
   margin: 50px;
   padding: 0 10px;
