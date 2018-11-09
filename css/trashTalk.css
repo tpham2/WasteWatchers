@@ -126,7 +126,7 @@ input[type="submit"]:hover {
 .navbar {
   overflow: hidden;
   background-color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -252,6 +252,7 @@ input[type="submit"]:hover {
       border:none;
     	padding:5px 20px;
       background: rgba(255,255,255,.1);
+      outline: none;
     }
     .login-form .group .signInButton {
       background-color: black;
@@ -274,6 +275,7 @@ input[type="submit"]:hover {
       border:none;
     	padding:5px 20px;
       background: rgba(255,255,255,.1);
+      outline: none;
     }
     .login-form .group .emailInput {
       margin-top: 250px;
@@ -384,6 +386,7 @@ input[type="submit"]:hover {
       margin-top: 0px;
       font-family: "Barlow Semi Condensed";
     }
+
 /* shelf life */
  .shelf_categories{
   margin:45px 10px 0px 15px;
@@ -555,6 +558,14 @@ input[type="submit"]:hover {
   float: right;
   width: 5%;
 }
+.profileStatus {
+  font-family: "Barlow Semi Condensed";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .appleList li{
   margin: 5px 0px 0px 0px;
   padding-right: 20px;
@@ -564,4 +575,89 @@ input[type="submit"]:hover {
   width: 300px;
   height: 5px;
   border-bottom:1px solid rgba(70, 168, 24, 0.5);
+}
+
+
+.kitchen {
+  width: 380px;
+  height: 538px;
+  margin: 2px 0px 0px 0px;
+}
+.popUpBin {
+  background: none;
+  border: none;
+  position: absolute;
+  margin: 190px 0px 0px 70px;
+}
+.compostHeader {
+  position: absolute;
+  font-family: "Barlow Semi Condensed";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 110px 0px 0px 47px;
+  background: rgba(255,255,255,0.5);
+  padding: 3px;
+}
+.help {
+  width: 50px;
+  height: 40px;
+  margin: 430px 10px 0px 55px;
+  background: none;
+  border: none;
+  position: absolute;
+}
+.popUpHeading{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+.modal-sm{
+  margin: 150px 0px 0px 40px;
+  width: 300px;
+}
+#tags {
+  background: #f1f1f1;
+  border: none;
+  margin: 10px 0px 10px 25px;
+  height: 30px;
+  width: 150px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 15px;
+  padding: none;
+}
+input.number {
+  background: #f1f1f1;
+  border: none;
+  margin: 10px 0px 10px 10px;
+  height: 30px;
+  width: 40px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 15px;
+  text-align: center;
+  padding: none;
+}
+.form-line-active input:focus{
+  outline-color: #46A818;
+}
+.done {
+  font-size: 18px;
+  color: #46A818;
+  background: #c4c4c4;
+}
+.cancel {
+  font-size: 15px;
+  position: relative;
+  float: left;
+  margin-right: 100px;
+}
+#add {
+  margin-left: 100px;
+  color: black;
+  background: #f1f1f1;
+  border: 1px black;
+  text-align: center;
+}
+.btn_remove {
+  background: none;
+  border: none;
 }
