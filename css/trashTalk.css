@@ -493,7 +493,7 @@ input[type="submit"]:hover {
 .col-xs-3{
    padding-left: 0px;
    padding-right: 0px;
-   margin-left:5px;
+   margin-left:10px;
  }
 .carousel-control.right{
   background-image: none;
@@ -659,6 +659,7 @@ input.number {
 .btn_remove {
   background: none;
   border: none;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -681,6 +682,29 @@ input.number {
     padding: 10px;
     border: 1px solid #888;
     width: 80%;
+}
+
+.modal-header h2{
+    margin-right: 25px;
+}
+
+.modal-header{
+  padding:0px;
+  margin:0px;
+}
+
+.modal-header .close{
+    margin: 0px;
+    margin-left: -61px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.modal-footer{
+    padding: 0px;
+    align-items: baseline;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* The Close Button */
