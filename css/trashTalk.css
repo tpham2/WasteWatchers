@@ -1,145 +1,699 @@
-/* Contains the classes for app -->*/
-.banner {
-  height: 140px;
-  padding: 10px;
-  border-bottom: solid gray;
+
+
+
+p {
+  margin-top: 11px;
+  padding-left: 8px;
+  font-family: 'Covered By Your Grace';
+  font-size: 25px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  padding: 10px;
+.box_shadow {
+  box-shadow: 0px 0px 10px 0px #C4C4C4;
+  z-index: -1;
 }
 
-.tabsbar {
-  border-bottom: solid gray;
+.tabs {
+  padding: 3px;
 }
 
-.individual-tab {
-  font-size: large;
-  width: 180px;
-  padding: 0% 3% 0% 5%;
-  color: inherit;
-  text-align: center;
+a {
+  font-family: 'Barlow Semi Condensed';
 }
 
-.active{
-  border-bottom: 5px solid rgba(70, 168, 24, 0.57);
-}
-
-.home{
-
-}
-
-.shelf-life{
-
-}
-
-.compost{
-
-}
-
-.redeem{
-
-}
-
-.help {
-
-}
-
-.column {
-  float: left;
-}
-
-.column.left {
-  width: 70%;
-}
-
-.column.right {
-
-  width: 25%;
-}
-.announcement_images{
-  align-content: center;
-}
-.announcement_content {
-  background-color: gray;
-  padding: 30px;
-  height: 600px;
-  border: 1px solid black;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a >img {
-  width: 70%;
-  margin: auto;
+.store_group {
+  position: absolute;
+  left: 10px;
+  border: 1px solid gray;
+  height: 240px;
+  width: 350px;
 }
 
 .store_locator {
-  padding: 30px;
-  height: 600px;
-  border: 1px solid black;
+  position: fixed;
+  left: 15px;
 }
 
-.btn-home {
-    background-color: white; /* White background */
-    border: 0px; /* Remove borders */
-    color: black; /* White text */
-    padding: 0 4px; /* Some padding */
-    font-size: 25px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+#searchbtn {
+  position: relative;
+  top: 3px;
+  right: 8px;
+  z-index: 4;
+}
 
+#wrap {
+  margin: 0px 30px;
+  display: inline-block;
+  position: relative;
+  height: 0px;
+  float: right;
+  top: 18px;
+  padding: 0px;
+  position: absolute;
+  right: 0px;
 }
- form.search input[type=text] {
-    padding: 3px;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-left: 10%;
-    float:left;
-    width: 70%;
+
+input[type="text"] {
+  height: 27px;
+  font-size: 13px;
+  display: inline-block;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: black;
+  padding-right: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
 }
-form.search button {
-    float: left;
-    width: 20%;
-    padding: 4px;
-    background: none;
-    color: black;
-    font-size: 17px;
-    border: 0px solid grey;
-    cursor: pointer;
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
 }
-form.search button:hover {
-    background: #46A818;
+
+input[type="text"]:focus {
+  width: 130px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
 }
- .active-home{
-  border-bottom: 5px solid rgba(70, 168, 24, 0.57);
+
+input[type="submit"] {
+  height: 27px;
+  width: 30px;
+  display: inline-block;
+  color:black;
+  float: right;
+  text-indent: -1000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  background: white;
 }
- .active{
-  border-bottom: 5px solid rgba(70, 168, 24, 0.57);
+
+input[type="submit"]:hover {
+  background: none;
 }
- /* Column alighment for shelf life search */
-.column.left2 {
-  width: 21%;
+
+
+
+.mapouter{
+  text-align:right;height:50px;width:60px;
+  }
+
+.gmap_canvas {
+  overflow:hidden;
+  margin-left: 2px;
+  background:none!important;
+  height:250px;
+  width:345px;
+  }
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-.shelf_life_search{
-  padding: 10px;
-  height: 400px;
-  width: 200px;
-  border: 1px solid black;
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 3px 10px;
+  text-decoration: none;
+  font-size: 13px;
 }
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: White;
+}
+
+.navbar a.active {
+  color: #46A818;
+  box-shadow: 0px 0px 10px 0px #C4C4C4;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 0px;
+}
+
+
+
+
+    .login-wrap{
+    	width:100%;
+    	margin:auto;
+    	max-width:525px;
+    	min-height:670px;
+    	position:relative;
+    }
+
+    .login-html{
+    	width:100%;
+    	height:100%;
+    	position:absolute;
+    	padding:120px 70px 50px 70px;
+    	background: rgba(70, 168, 24, 0.5);
+    }
+
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm{
+    	top: 10px;
+    	left:0;
+    	right:0;
+    	bottom:0;
+    	position:absolute;
+    	transform:rotateY(180deg);
+    	backface-visibility:hidden;
+    	transition:all .4s linear;
+    }
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group .check{
+    	display:none;
+    }
+    .login-html .tab,
+    .login-form .group .label,
+    .login-form .group .button{
+    	text-transform:uppercase;
+    }
+    .login-html .tab{
+      font-family: "Barlow Semi Condensed";
+    	font-size:22px;
+    	margin-right:15px;
+    	padding-bottom:5px;
+    	margin:0 15px 10px 0;
+    	display:inline-block;
+    	border-bottom:2px solid transparent;
+    }
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab{
+    	color:white;
+    	border-color:black;
+    }
+    .login-form{
+    	min-height:350px;
+    	position:relative;
+    	perspective:1000px;
+    	transform-style:preserve-3d;
+    }
+    .login-form .group{
+    	margin-bottom:15px;
+    }
+
+
+    .login-form .group .usernameLabel {
+      margin-top: 10px;
+      font-family: "Barlow Semi Condensed";
+      font-size: 12px;
+      text-transform:uppercase;
+    }
+    .login-form .group .passwordLabel {
+      margin-top: 25px;
+      font-family: "Barlow Semi Condensed";
+      font-size: 12px;
+      text-transform:uppercase;
+    }
+    .login-form .group .usernameInput {
+      margin-top: 35px;
+      width:100%;
+    	color: black;
+    	display: inline-block;
+      background: none;
+      border:none;
+    	padding:15px 20px;
+      background: rgba(255,255,255,.1);
+    }
+    .login-form .group .passwordInput {
+      margin-top: 0px;
+      width:100%;
+      color: black;
+      display: inline-block;
+      background: none;
+      border:none;
+    	padding:5px 20px;
+      background: rgba(255,255,255,.1);
+      outline: none;
+    }
+    .login-form .group .signInButton {
+      background-color: black;
+      color: white;
+      padding: 10px 30px;
+      text-align: center;
+      display: inline-block;
+      font-family: "Barlow Semi Condensed";
+      font-size: 15px;
+      text-transform:uppercase;
+      margin: 20px 65px;
+      cursor: pointer;
+    }
+    .login-form .group .repeatpasswordInput {
+      margin-top: 0px;
+      width:100%;
+      color: black;
+      display: inline-block;
+      background: none;
+      border:none;
+    	padding:5px 20px;
+      background: rgba(255,255,255,.1);
+      outline: none;
+    }
+    .login-form .group .emailInput {
+      margin-top: 250px;
+      width:100%;
+      color: black;
+      display: inline-block;
+      background: none;
+      border:none;
+    	padding:15px 20px;
+      background: rgba(255,255,255,.1);
+    }
+    .login-form .group .signUpButton {
+      background-color: black;
+      color: white;
+      padding: 10px 30px;
+      text-align: center;
+      display: inline-block;
+      font-family: "Barlow Semi Condensed";
+      font-size: 15px;
+      text-transform:uppercase;
+      margin: 40px 60px;
+      cursor: pointer;
+    }
+    .login-form .group .button{
+      width:100%;
+    	color: black;
+    	display: inline-block;
+      background: none;
+    }
+
+    .login-form .group .input,
+    .login-form .group .button{
+    	border:none;
+    	padding:10px 20px;
+      background: rgba(255,255,255,.1);
+    }
+    .login-form .group input[data-type="password"]
+    {
+    	text-security:circle;
+    	-webkit-text-security:circle;
+    }
+    .login-form .group .label{
+    	color:black;
+      font-family: "Barlow Semi Condensed";
+    	font-size:12px;
+    }
+    .login-form .group .button{
+      background: none;
+    }
+    .login-form .group label .icon{
+    	width:15px;
+    	height:15px;
+    	position:relative;
+    	display:inline-block;
+    	background:rgba(255,255,255,.1);
+    }
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after{
+    	content:'';
+    	width:10px;
+    	height:2px;
+    	background:#fff;
+    	position:absolute;
+    	transition:all .2s ease-in-out 0s;
+    }
+    .login-form .group label .icon:before{
+    	left:3px;
+    	width:5px;
+    	bottom:4px;
+    	transform:scale(0) rotate(0);
+    }
+    .login-form .group label .icon:after{
+    	top:6px;
+    	right:0;
+    	transform:scale(0) rotate(0);
+    }
+    .login-form .group .check:checked + label{
+    	color:#fff;
+    }
+    .login-form .group .check:checked + label .icon{
+    	background:#1161ee;
+    }
+    .login-form .group .check:checked + label .icon:before{
+    	transform:scale(1) rotate(45deg);
+    }
+    .login-form .group .check:checked + label .icon:after{
+    	transform:scale(1) rotate(-45deg);
+    }
+    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    	transform:rotate(0);
+    }
+    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    	transform:rotate(0);
+    }
+
+    .hr{
+    	height:2px;
+    	margin:40px 0 20px 0;
+    	background:rgba(255,255,255,.2);
+    }
+    .hr2{
+    	height:2px;
+    	margin:0px 0 20px 0;
+    	background:rgba(255,255,255,.2);
+    }
+    .foot-lnk{
+    	text-align:center;
+      margin-top: 0px;
+      font-family: "Barlow Semi Condensed";
+    }
+
+/* shelf life */
  .shelf_categories{
-  margin:0 4% 5% 5%;
+  margin:45px 10px 0px 15px;
   float: left;
   clear:none;
-  width:20%;
-  height:250px;
+  width:160px;
+  height:160px;
   border:2px solid #808080;
+  padding: 0px 0px;
 }
- .categories_style{
+ .categories_text{
   color: black;
-  padding: 17% 2% 0 0;
-  text-align: right;
+  margin: 0px 5px 0px 0px;
+  padding: 0px 0px;
+  float: right;
+}
+ .shelfPicture{
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px;
+   width: 100%;
+ }
+/* within each shelf life content page */
+ .shelfImage{
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px;
+   width: 80%;
+ }
+.shelfContent{
+  font-family: "Roboto";
+  margin-left: 40px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
+}
+.cfLife{
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  margin-right:5px;
+  letter-spacing: .6px;
+}
+
+/* produce page */
+ .produce_categories{
+  margin:40px 10px 0px 38px;
+  float: left;
+  clear:none;
+  width:300px;
+  height:150px;
+  background-color: rgba(69, 99, 71, 1);
+  border:2px solid #808080;
+  padding: 45px 0px;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+ /* fruit life */
+  .fruit_categories{
+   margin:10px 0px 10px 18px;
+   float: left;
+   clear:none;
+   width:160px;
+   height:160px;
+   border: 0px solid #808080;
+   background: #f1f1f1;
+   box-shadow: 2px 5px rgba(70, 168, 24, 0.5);
+   padding: 0px 0px;
+ }
+  .fruit_text{
+   color: black;
+   font-size: 22px;
+   margin: 0px 0px 0px 10px;
+   padding: 0px 0px;
+   float: left;
+ }
+  .fruitPicture{
+    margin: 10px 0px 0px 15px;
+    padding: 0px 0px;
+    width: 70%;
+  }
+  .Title{
+    font-family:"Barlow Semi Condensed";
+    font-size: 22px;
+    margin: 0px 30px;
+    text-align: center;
+  }
+
+ .Header{
+   font-family: "Barlow Semi Condensed";
+   font-size: 25px;
+   font-weight: bold;
+   margin: 10px 30px 0px 30px;
+   padding-top: 0px;
+ }
+ .redeemCoins{
+   font-family: "Barlow Semi Condensed";
+   font-size: 20px;
+   margin: 0px 0px 0px 0px;
+   padding: 10px;
+   padding-top: 15px;
+ }
+.col-xs-3{
+   padding-left: 0px;
+   padding-right: 0px;
+   margin-left:5px;
+ }
+.carousel-control.right{
+  background-image: none;
+  margin-right: -15px;
+}
+.carousel-control.left{
+  background-image: none;
+  margin-left: -15px;
+}
+.glyphicon{
+  color: black;
+  opacity: solid;
+}
+ .carousel-wrap {
+  margin: 50px;
+  padding: 0 10px;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+}
+
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+
+.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+
+.profileList li{
+  margin: 5px 0px 0px 0px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 25px;
+  display: table;
+  width: 300px;
+  height: 5px;
+  float: left;
+  border-top:1px solid rgba(70, 168, 24, 0.5);
+  border-bottom:1px solid rgba(70, 168, 24, 0.5);
+}
+.profileArrow{
+  margin-top: 7px;
+  margin-right: 10px;
+  float: right;
+  width: 5%;
+}
+.profileStatus {
+  font-family: "Barlow Semi Condensed";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.appleList li{
+  margin: 5px 0px 0px 0px;
+  padding-right: 20px;
+  font-family: "Roboto";
+  font-size: 15px;
+  display: table;
+  width: 300px;
+  height: 5px;
+  border-bottom:1px solid rgba(70, 168, 24, 0.5);
+}
+
+.kitchen {
+  width: 380px;
+  height: 538px;
+  margin: 2px 0px 0px 0px;
+}
+.popUpBin {
+  background: none;
+  border: none;
+  position: absolute;
+  margin: 190px 0px 0px 70px;
+}
+.compostHeader {
+  position: absolute;
+  font-family: "Barlow Semi Condensed";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 110px 0px 0px 47px;
+  background: rgba(255,255,255,0.5);
+  padding: 3px;
+}
+.help {
+  width: 50px;
+  height: 40px;
+  margin: 430px 10px 0px 55px;
+  background: none;
+  border: none;
+  position: absolute;
+}
+.popUpHeading{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+.modal-sm{
+  margin: 150px 0px 0px 40px;
+  width: 300px;
+}
+#tags {
+  background: #f1f1f1;
+  border: none;
+  margin: 10px 0px 10px 25px;
+  height: 30px;
+  width: 150px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 15px;
+  padding: none;
+}
+input.number {
+  background: #f1f1f1;
+  border: none;
+  margin: 10px 0px 10px 10px;
+  height: 30px;
+  width: 40px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 15px;
+  text-align: center;
+  padding: none;
+}
+.form-line-active input:focus{
+  outline-color: #46A818;
+}
+.done {
+  font-size: 18px;
+  color: #46A818;
+  background: #c4c4c4;
+}
+.cancel {
+  font-size: 15px;
+  position: relative;
+  float: left;
+  margin-right: 100px;
+}
+#add {
+  margin-left: 100px;
+  color: black;
+  background: #f1f1f1;
+  border: 1px black;
+  text-align: center;
+}
+.btn_remove {
+  background: none;
+  border: none;
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -2,68 +2,384 @@
 
 <html>
 <head>
-  <title>Home Page</title>
+  <title>Redeem</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/trashTalk.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
+
 
 </head>
-<!-- This will be the apps title banner and tabs-->
+
 <body>
-  <div class="container-fluid banner">
-    <h1>Waste Watcher</h1>
+
+  <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 2px;">
+    <p>WasteWatchers</p>
+
+    <div id="wrap">
+      <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="SEARCH...">
+        <input id="search_submit" value="Rechercher" type="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </form>
+    </div>
   </div>
-  <div class="container-fluid tabsbar">
-    <nav class="navbar navbar-expand-lg">
-    <ul class="nav navbar-nav">
-      <li class="individual-tab home"><a style="color: black;" href="home_page.html">
-      <button class="btn-home"><i class="fa fa-home"></i></button></a>
-      </li>
-      <li class="individual-tab shelf-life"><a style="color: black;"
-        href="shelf_life.html">Shelf Life</a>
-      </li>
-      <li class="individual-tab compost"><a style="color: black;"
-        href="compost.html">Compost</a>
-      </li>
-      <li class="individual-tab redeem"><a data-toggle="tab"
-        class="active show" style="color: black;" href="redeem.html">Redeem</a>
-      </li>
-      <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
-      </li>
-    <li><form class="search" action="action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </li>
-</ul>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs" href="home_page.html"><img src="images/home-black.png"><br>Home</a>
+    <a class="tabs active" href="redeem.html"><img src="images/shop-green.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
   </nav>
-<!-- These are the links for the tabs -->
-    <div class="tab-content">
-      <div class="tab-pane fade">
-        <a href="home_page.html"></a>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal content-center">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Bananas</h2>
       </div>
-      <div class="tab-pane fade">
-        <a href="shelf_life.html"></a>
+      <div class="modal-body">
+          <a><img src="images/bananas_coupons.jpg" style="width:85px; height:85px; padding-left: 0px;">
+          </a>
       </div>
-      <div class="tab-pane fade">
-        <a href="compost.html"></a>
+      <div class="modal-footer">
+        <a><img src="images/barcode.png" style="width:25%; height: 25%; padding: 10px;">
+          Expires: Jan 1th, 2019</a>
       </div>
-      <div class="tab-pane fade in active">
-        <a href="redeem.html"></a>
+    </div>
+
+</div>
+
+  <div class="Header" style="float: right;">
+    <img src="images/compost-icon.png" style="width:20px;">
+    My Coins: 30
+  </div>
+
+  <br>
+
+  <div class="redeemCoins" style="margin: 0;">
+    <img src="images/compost-icon.png" style="width: 30px;">
+    30
+  </div>
+  <!-- First Coupon Carousel-->
+  <div class="container" style="padding-bottom: 15px; border-bottom: 1px solid rgba(70, 168, 24, 0.5);">
+    <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="col-xs-offset-1"></div>
+            <div class="col-xs-3">
+              <a>
+                <span id="coupons"><img class="couponPics" src="images/bananas_coupons.jpg" alt="Bananas" style="width:85px; height:85px;">
+                </span>
+              </a>
+            </div>
+
+            <div class="col-xs-offset-0"></div>
+            <div class="col-xs-3">
+              <a>
+                <span id="coupons"><img class="couponPics" src="images/oranges_coupons.jpg" alt="Oranges" style="width:85px; height:85px;">
+                </span>
+              </a>
+            </div>
+            <div class="col-xs-offset-0"></div>
+            <div class="col-xs-3">
+              <a>
+                <span><img class="couponPics" src="images/onions_coupons.jpg" alt="Onions" style="width:85px; height:85px;">
+                </span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-xs-offset-1"></div>
+            <div class="col-xs-3">
+              <a>
+                <span id="coupons"><img class="couponPics" src="images/apples_coupons.jpg" alt="Apples" style="width:85px; height:85px;">
+                </span>
+              </a>
+            </div>
+            <div class="col-xs-3">
+            </a>
+            <span id="coupons"><img class="couponPics" src="images/broccoli_coupons.jpg" alt="Broccoli" style="width:85px; height:85px;">
+            </span>
+          </a>
+        </div>
+        <div class="col-xs-offset-0"></div>
+        <div class="col-xs-3">
+          <a>
+            <span id="coupons"><img class="couponPics" src="images/carrots_coupons.jpg" alt="Carrots" style="width:85px; height:85px;">
+            </span>
+          </a>
+        </div>
+        <div class="col-xs-offset-0"></div>
       </div>
-      <div class="tab-pane fade">
-        <a href="help.html"></a>
+    </div>
+    <div class="item">
+      <div class="row">
+        <div class="col-xs-offset-1"></div>
+        <div class="col-xs-3">
+          <a>
+            <span id="coupons"><img class="couponPics" src="images/kiwis_coupons.jpg" alt="Kiwis" style="width:85px; height:85px;">
+            </span>
+          </a>
+        </div>
+        <div class="col-xs-3">
+          <a>
+            <span id="coupons"><img class="couponPics" src="images/pears_coupons.jpg" alt="Pears" style="width:85px; height:85px;">
+            </span>
+          </a>
+        </div>
+        <div class="col-xs-offset-0"></div>
+        <div class="col-xs-3">
+          <a>
+            <span id="coupons"><img class="couponPics" src="images/peaches_coupons.jpg" alt="Peaches" style="width:85px; height:85px;">
+            </span>
+          </a>
+        </div>
+        <div class="col-xs-offset-0"></div>
       </div>
     </div>
   </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+<div class="redeemCoins" style="margin: 0;">
+  <img src="images/compost-icon.png" style="width:30px;">
+  60
+</div>
+
+<!-- Second Coupon Carousel-->
+<div class="container" style="padding-bottom: 15px; border-bottom: 1px solid rgba(70, 168, 24, 0.5);">
+  <div id="myCarousel2" class="carousel slide" data-interval="false" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row">
+          <div class="col-xs-offset-1"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/corn_coupons.jpg" alt="Corn" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-offset-0"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/potatoes_coupons.jpg" alt="Potatoes" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-offset-0"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/celery_coupons.jpg" alt="Celery" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-xs-offset-1"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/green_beans_coupons.jpg" alt="Green Beans" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-3">
+          </a>
+          <span id="coupons"><img src="images/cucumber_coupons.jpg" alt="Cucumber" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/grapes_coupons.jpg" alt="Grapes" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="row">
+      <div class="col-xs-offset-1"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/asparagus_coupons.jpg" alt="Asparagus" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/spinach_coupons.jpg" alt="Spinach" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/strawberries_coupons.jpg" alt="Strawberries" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel2" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+
+<div class="redeemCoins" style="margin: 0;">
+  <img src="images/compost-icon.png" style="width:30px;">
+  90
+</div>
+
+<!-- Third Coupon Carousel-->
+<div class="container">
+  <div id="myCarousel3" class="carousel slide" data-interval="false" data-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row">
+          <div class="col-xs-offset-1"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/pineapples_coupons.jpg" alt="Pineapples" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+
+          <div class="col-xs-offset-0"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/watermelon_coupons.jpg" alt="Watermelons" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-offset-0"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/eggplant_coupons.jpg" alt="Eggplants" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-xs-offset-1"></div>
+          <div class="col-xs-3">
+            <a>
+              <span id="coupons"><img src="images/cabbage_coupons.jpg" alt="Cabbage" style="width:85px; height:85px;">
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-3">
+          </a>
+          <span id="coupons"><img src="images/lettuce_coupons.jpg" alt="Lettuce" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/honeydew_coupons.jpg" alt="Honeydew" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="row">
+      <div class="col-xs-offset-1"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/cantaloupe_coupons.jpg" alt="Cantaloupe" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/mango_coupons.jpg" alt="Mangoes" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+      <div class="col-xs-3">
+        <a>
+          <span id="coupons"><img src="images/guava_coupons.jpg" alt="Guava" style="width:85px; height:85px;">
+          </span>
+        </a>
+      </div>
+      <div class="col-xs-offset-0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel3" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
 </body>
-<p> This is where users can redeem their points for various coupons.</p>
 </html>

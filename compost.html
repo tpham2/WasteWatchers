@@ -2,69 +2,135 @@
 
 <html>
 <head>
-  <title>Home Page</title>
+  <title>Compost</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- Style -->
+    <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
 
 </head>
 <!-- This will be the apps title banner and tabs-->
 <body>
-  <div class="container-fluid banner">
-    <h1>Waste Watcher</h1>
+
+  <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 2px;">
+    <p>WasteWatchers</p>
+
+      <div id="wrap">
+        <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="SEARCH...">
+        <input id="search_submit" value="Rechercher" type="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </form>
+      </div>
   </div>
-  <div class="container-fluid tabsbar">
-    <nav class="navbar navbar-expand-lg">
-    <ul class="nav navbar-nav">
-      <li class="individual-tab home"><a style="color: black;" href="home_page.html">
-      <button class="btn-home"><i class="fa fa-home"></i></button></a>
-      </li>
-      <li class="individual-tab shelf-life"><a style="color: black;"
-        href="shelf_life.html">Shelf Life</a>
-      </li>
-      <li class="individual-tab compost"><a data-toggle="tab" class="active show" style="color: black;"
-        href="compost.html">Compost</a>
-      </li>
-      <li class="individual-tab redeem"><a style="color: black;"
-        href="redeem.html">Redeem</a>
-      </li>
-      <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
-      </li>
-    <li>
-    <form class="search" action="action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </li>
-</ul>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs active" href="compost.html"><img src="images/compost-green.png" style="height:17px"><br>Compost</a>
+    <a class="tabs" href="home_page.html"><img src="images/home-black.png"><br>Home</a>
+    <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
   </nav>
-<!-- These are the links for the tabs -->
-    <div class="tab-content">
-      <div class="tab-pane fade">
-        <a href="home_page.html"></a>
-      </div>
-      <div class="tab-pane fade">
-        <a href="shelf_life.html"></a>
-      </div>
-      <div class="tab-pane fade in active">
-        <a href="compost.html"></a>
-      </div>
-      <div class="tab-pane fade">
-        <a href="redeem.html"></a>
-      </div>
-      <div class="tab-pane fade">
-        <a href="help.html"></a>
-      </div>
-    </div>
+
+
+  <div class="compostHeader">
+    <img src="images/compost-icon.png" style="width:20px;">
+    My Coins: 30
   </div>
+
+
+  <div class="container">
+    <div class="row">
+      <img src="images/counter.png" class="kitchen">
+      <img src="images/compost_bin.png" class="btn btn-primary popUpBin" data-toggle="modal" data-target=".demo-popup">
+      <img src="images/help.png" class="btn btn-primary help" data-toggle="modal" data-target=".demo-help">
+      <!-- popup box modal starts here -->
+    <div class="modal fade demo-popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="modal-title popUpHeading">Add Items</a>
+          </div>
+
+          <div class="modal-body">
+                <div class="ui-widget form-line-active" id="list">
+                  <input id="tags" placeholder="Type Food...">
+                  <input class="number" type="number" min="1" max="10" value="1">
+                </div>
+            <button id="add" class="btn btn-success"><a>+ Item</a></button>
+        </div>
+
+          <div class="modal-footer">
+            <button type="button" class="close cancel" data-dismiss="modal" aria-hidden="true"><a>Cancel</a></button>
+            <button type="button" class="close done" data-dismiss="modal" data-toggle="alert" data-target="alert-success" aria-hidden="true"><a>SUBMIT</a></button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-->
+    <!-- popup box modal ends -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
+
+  <div class="container">
+    <div class="row">
+      <!-- popup box modal starts here -->
+    <div class="modal fade demo-help" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="modal-title popUpHeading">Help FAQs</a>
+          </div>
+
+          <div class="modal-body">
+            <a style="font-weight: bold;">What is Compost?</a>
+            <br>
+            <a> Organic material that can be added to soil to help plants grow.
+              Making compost keeps these materials out of landfills where they take up space and release methane, a potent greenhouse gas.
+            </a>
+            <br><br>
+            <a style="font-weight: bold;">How do I use the Virtual Compost?</a>
+            <br>
+            <a> Tap on the Virtual Bin to add your compost items.
+              With each item you compost, you accumulate points which you can later redeem for coupons at the grocery store.
+            </a>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="close done" data-dismiss="modal" aria-hidden="true"><a>Got it!</a></button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-->
+    <!-- popup box modal ends -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
+<script>
+  $(document).ready(function(){
+    var i = 1;
+    $('#add').click(function() {
+      i++;
+      $('#list').append('<div id="row'+i+'"><input id="tags" placeholder="Type Food..."><input class="number" type="number" min="1" max="10" value="1"><button id="delete" class="btn btn-light btn_remove"><a>X</a></button></div>');
+    });
+    $('body').on('click', '#delete', function(){
+      $(this).parent('div').remove();
+    });
+  });
+</script>
+
 </body>
-<p> This is the page for the interactive Compost feature </p>
 </html>

@@ -16,41 +16,43 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- Style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
 
 </head>
 
 <body>
-  <div class="container-fluid banner">
-    <h1>Waste Watcher</h1>
-  </div>
-  <div class="container-fluid tabsbar">
-    <nav class="navbar navbar-expand-lg">
-    <ul class="nav navbar-nav">
-      <li class="individual-tab home"><a style="color: black;" href="home_page.html">
-      <button class="btn-home"><i class="fa fa-home"></i></button></a>
-      </li>
-      <li class="individual-tab shelf-life"><a data-toggle="tab" class="active show" style="color: black;"
-        href="shelf_life.html">Shelf Life</a>
-      </li>
-      <li class="individual-tab compost"><a style="color: black;"
-        href="compost.html">Compost</a>
-      </li>
-      <li class="individual-tab redeem"><a style="color: black;"
-        href="redeem.html">Redeem</a>
-      </li>
-      <li class="individual-tab help"><a style="color: black;" href="help.html">Help</a>
-      </li>
-  <li>
-    <form class="search" action="action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+  <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 2px;">
+    <p>WasteWatchers</p>
+
+
+    <div id="wrap">
+      <form action="" autocomplete="on">
+      <input id="search" name="search" type="text" placeholder="SEARCH...">
+      <input id="search_submit" value="Rechercher" type="submit">
+      <img src="images/search-black.png" id="searchbtn">
     </form>
-  </li>
-</ul>
+    </div>
   </div>
-  <br>
-  <p>This page will have Shelf Life of Produce products</p>
-</div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs active" href="shelf_life.html"><img src="images/clock-green.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs" href="home_page.html"><img src="images/home-black.png"><br>Home</a>
+    <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
+  </nav>
+
+  <div class="Header">
+    <a href="shelf_life.html"><img src="images/carat-l-black.png"></a>
+    PRODUCE
+  </div>
+
+  <div>
+    <a class="produce_categories" href="fruits.html">FRUITS</a>
+    <a class="produce_categories" href="veggies.html">VEGGIES</a><a href="veggies.html"</a>
+  </div>
 
 </body>
 
