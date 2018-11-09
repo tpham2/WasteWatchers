@@ -4,13 +4,13 @@ $(document).ready(function(){
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var coupon = document.getElementById("myCarousel");
+var coupons = document.getElementById('coupons');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-coupon.onclick = function() {
+coupons.onclick = function() {
   modal.style.display = "block";
 }
 
@@ -25,7 +25,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
+/*
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -47,5 +47,6 @@ window.onclick = function(event) {
       items: 5
     }
   }
-})
+});
+*/
 });
