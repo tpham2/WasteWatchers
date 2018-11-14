@@ -721,3 +721,12 @@ input.number {
     text-decoration: none;
     cursor: pointer;
 }
+
+.thumbnail {
+  border: 0px;
+  margin-top: 10px;
+}
+
+#expiration{
+  font-family: "Barlow Semi Condensed";
+}

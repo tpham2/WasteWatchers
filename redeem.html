@@ -62,10 +62,42 @@
           </a>
       </div>
       <div class="modal-footer image">
-        <img src="images/barcode.png" style="width:35%; height: 35%; padding: 5px; margin-right: 91px;">
-        <div id="expiration" style="font-size: 10px; margin-right: -50px; margin-top: 10px; height: 10px;">Expires: Jan 1th, 2019</div>
+        <a href="#" class="thumbnail">
+          <img src="images/barcode.png" class="img" style="width:45%; height: 45%; padding-top: 15px;">
+        <p id="expiration" style="text-align: center; font-size: 15px; padding-top: 20px; height: 10px;">Expires: Jan 1th, 2019</p>
+      </a>
       </div>
     </div>
+
+</div>
+
+<!-- Modal Template -->
+<script id="modal-template" type="text/x-handlebars-template">
+<div id="myModal" class="modal content-center">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>{{produce}}</h2>
+    </div>
+    <div class="modal-body">
+        <a><img src="{{producePic}}" style="height:85px; margin-left: 61px;">
+        </a>
+    </div>
+    <div class="modal-footer image">
+      <a href="#" class="thumbnail">
+      <img src="{{barcode}}" style="width:45%; height: 45%; padding-top: 15px;">
+      <p id="expiration" style="text-align: center; font-size: 15px; padding-top: 20px; height: 10px;">{{expiration}}</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+</script>
+
+<!-- Empty Templated Modals -->
+<div id="templatedCoupons">
 
 </div>
 
@@ -91,7 +123,7 @@
             <div class="col-xs-offset-1"></div>
             <div class="col-xs-3">
               <a>
-                <span id="coupons"><img class="couponPics" src="images/bananas_coupons.jpg" alt="Bananas" style="width:85px; height:85px;">
+                <span><img class="couponPics" src="images/bananas_coupons.jpg" alt="Bananas" style="width:85px; height:85px;">
                 </span>
               </a>
             </div>
@@ -99,7 +131,7 @@
             <div class="col-xs-offset-0"></div>
             <div class="col-xs-3">
               <a>
-                <span id="coupons"><img class="couponPics" src="images/oranges_coupons.jpg" alt="Oranges" style="width:85px; height:85px;">
+                <span><img class="couponPics" src="images/oranges_coupons.jpg" alt="Oranges" style="width:85px; height:85px;">
                 </span>
               </a>
             </div>
@@ -118,20 +150,20 @@
             <div class="col-xs-offset-1"></div>
             <div class="col-xs-3">
               <a>
-                <span id="coupons"><img class="couponPics" src="images/apples_coupons.jpg" alt="Apples" style="width:85px; height:85px;">
+                <span><img class="couponPics" src="images/apples_coupons.jpg" alt="Apples" style="width:85px; height:85px;">
                 </span>
               </a>
             </div>
             <div class="col-xs-3">
             </a>
-            <span id="coupons"><img class="couponPics" src="images/broccoli_coupons.jpg" alt="Broccoli" style="width:85px; height:85px;">
+            <span><img class="couponPics" src="images/broccoli_coupons.jpg" alt="Broccoli" style="width:85px; height:85px;">
             </span>
           </a>
         </div>
         <div class="col-xs-offset-0"></div>
         <div class="col-xs-3">
           <a>
-            <span id="coupons"><img class="couponPics" src="images/carrots_coupons.jpg" alt="Carrots" style="width:85px; height:85px;">
+            <span><img class="couponPics" src="images/carrots_coupons.jpg" alt="Carrots" style="width:85px; height:85px;">
             </span>
           </a>
         </div>
@@ -143,20 +175,20 @@
         <div class="col-xs-offset-1"></div>
         <div class="col-xs-3">
           <a>
-            <span id="coupons"><img class="couponPics" src="images/kiwis_coupons.jpg" alt="Kiwis" style="width:85px; height:85px;">
+            <span><img class="couponPics" src="images/kiwis_coupons.jpg" alt="Kiwis" style="width:85px; height:85px;">
             </span>
           </a>
         </div>
         <div class="col-xs-3">
           <a>
-            <span id="coupons"><img class="couponPics" src="images/pears_coupons.jpg" alt="Pears" style="width:85px; height:85px;">
+            <span><img class="couponPics" src="images/pears_coupons.jpg" alt="Pears" style="width:85px; height:85px;">
             </span>
           </a>
         </div>
         <div class="col-xs-offset-0"></div>
         <div class="col-xs-3">
           <a>
-            <span id="coupons"><img class="couponPics" src="images/peaches_coupons.jpg" alt="Peaches" style="width:85px; height:85px;">
+            <span><img class="couponPics" src="images/peaches_coupons.jpg" alt="Peaches" style="width:85px; height:85px;">
             </span>
           </a>
         </div>
@@ -194,21 +226,21 @@
           <div class="col-xs-offset-1"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/corn_coupons.jpg" alt="Corn" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/corn_coupons.jpg" alt="Corn" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
           <div class="col-xs-offset-0"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/potatoes_coupons.jpg" alt="Potatoes" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/potatoes_coupons.jpg" alt="Potatoes" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
           <div class="col-xs-offset-0"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/celery_coupons.jpg" alt="Celery" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/celery_coupons.jpg" alt="Celery" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
@@ -220,20 +252,20 @@
           <div class="col-xs-offset-1"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/green_beans_coupons.jpg" alt="Green Beans" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/green_beans_coupons.jpg" alt="Green Beans" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
           <div class="col-xs-3">
           </a>
-          <span id="coupons"><img src="images/cucumber_coupons.jpg" alt="Cucumber" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/cucumber_coupons.jpg" alt="Cucumber" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-offset-0"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/grapes_coupons.jpg" alt="Grapes" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/grapes_coupons.jpg" alt="Grapes" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
@@ -245,20 +277,20 @@
       <div class="col-xs-offset-1"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/asparagus_coupons.jpg" alt="Asparagus" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/asparagus_coupons.jpg" alt="Asparagus" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/spinach_coupons.jpg" alt="Spinach" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/spinach_coupons.jpg" alt="Spinach" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-offset-0"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/strawberries_coupons.jpg" alt="Strawberries" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/strawberries_coupons.jpg" alt="Strawberries" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
@@ -295,7 +327,7 @@
           <div class="col-xs-offset-1"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/pineapples_coupons.jpg" alt="Pineapples" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/pineapples_coupons.jpg" alt="Pineapples" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
@@ -303,14 +335,14 @@
           <div class="col-xs-offset-0"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/watermelon_coupons.jpg" alt="Watermelons" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/watermelon_coupons.jpg" alt="Watermelons" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
           <div class="col-xs-offset-0"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/eggplant_coupons.jpg" alt="Eggplants" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/eggplant_coupons.jpg" alt="Eggplants" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
@@ -322,20 +354,20 @@
           <div class="col-xs-offset-1"></div>
           <div class="col-xs-3">
             <a>
-              <span id="coupons"><img src="images/cabbage_coupons.jpg" alt="Cabbage" style="width:85px; height:85px;">
+              <span><img class="couponPics" src="images/cabbage_coupons.jpg" alt="Cabbage" style="width:85px; height:85px;">
               </span>
             </a>
           </div>
           <div class="col-xs-3">
           </a>
-          <span id="coupons"><img src="images/lettuce_coupons.jpg" alt="Lettuce" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/lettuce_coupons.jpg" alt="Lettuce" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-offset-0"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/honeydew_coupons.jpg" alt="Honeydew" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/honeydew_coupons.jpg" alt="Honeydew" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
@@ -347,20 +379,20 @@
       <div class="col-xs-offset-1"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/cantaloupe_coupons.jpg" alt="Cantaloupe" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/cantaloupe_coupons.jpg" alt="Cantaloupe" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/mango_coupons.jpg" alt="Mangoes" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/mango_coupons.jpg" alt="Mangoes" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
       <div class="col-xs-offset-0"></div>
       <div class="col-xs-3">
         <a>
-          <span id="coupons"><img src="images/guava_coupons.jpg" alt="Guava" style="width:85px; height:85px;">
+          <span><img class="couponPics" src="images/guava_coupons.jpg" alt="Guava" style="width:85px; height:85px;">
           </span>
         </a>
       </div>
