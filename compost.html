@@ -13,6 +13,8 @@
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/trashTalk.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,51 +50,17 @@
 
   <div class="compostHeader">
     <img src="images/compost-icon.png" style="width:20px;">
-    My Coins: 30
+    My Coins: <p id="points"></p>
   </div>
 
-
-  <div class="container">
-    <div class="row">
-      <img src="images/counter.png" class="kitchen">
-      <img src="images/compost_bin.png" class="btn btn-primary popUpBin" data-toggle="modal" data-target=".demo-popup">
-      <img src="images/help.png" class="btn btn-primary help" data-toggle="modal" data-target=".demo-help">
-      <!-- popup box modal starts here -->
-    <div class="modal fade demo-popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a class="modal-title popUpHeading">Add Items</a>
-          </div>
-
-          <div class="modal-body">
-                <div class="ui-widget form-line-active" id="list">
-                  <input id="tags" placeholder="Type Food...">
-                  <input class="number" type="number" min="1" max="10" value="1">
-                </div>
-            <button id="add" class="btn btn-success"><a>+ Item</a></button>
-        </div>
-
-          <div class="modal-footer">
-            <button type="button" class="close cancel" data-dismiss="modal" aria-hidden="true"><a>Cancel</a></button>
-            <button type="button" class="close done" data-dismiss="modal" data-toggle="alert" data-target="alert-success" aria-hidden="true"><a>SUBMIT</a></button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal-->
-    <!-- popup box modal ends -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-
-
   <div class="container">
     <div class="row">
       <!-- popup box modal starts here -->
-    <div class="modal fade demo-help" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal fade demo-help" tabindex="-1" role="dialog" id="helpModal">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
-            <a class="modal-title popUpHeading">Help FAQs</a>
+            <a class="modal-title popUpHeading">Virtual Compost FAQs</a>
           </div>
 
           <div class="modal-body">
@@ -119,17 +87,119 @@
     </div> <!-- /.row -->
   </div> <!-- /.container -->
 
+  <div class="container">
+    <div class="row">
+      <img src="images/counter.png" class="kitchen">
+      <img src="images/compost_bin.png" class="btn btn-primary popUpBin" data-toggle="modal" data-target=".demo-popup">
+      <img src="images/help.png" class="btn btn-primary help" data-toggle="modal" data-target=".demo-help">
+      <!-- popup box modal starts here -->
+    <div class="modal fade demo-popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="modal-title popUpHeading">Add Items</a>
+          </div>
+
+          <div class="modal-body">
+             <div class="ui-widget form-line-active" id="list">
+                <input id="tags" class="compostSearch" placeholder="Type Food...">
+                <input class="number" type="number" min="1" max="10" value="1">
+              </div>
+            <button id="add" class="btn btn-success"><a>+ Item</a></button>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="close cancel" data-dismiss="modal" aria-hidden="true"><a>Cancel</a></button>
+            <button id="submit" type="button" class="close done" data-dismiss="modal" data-toggle="alert" data-target="alert-success" aria-hidden="true"><a>SUBMIT</a></button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-->
+    <!-- popup box modal ends -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
 <script>
+
+var food = [
+  {"category": "fruitItems", "label": "Apple Core", "points": 5},
+  {"category": "fruitItems", "label": "Avocado Pit", "points": 3},
+];
+
   $(document).ready(function(){
+
     var i = 1;
     $('#add').click(function() {
       i++;
-      $('#list').append('<div id="row'+i+'"><input id="tags" placeholder="Type Food..."><input class="number" type="number" min="1" max="10" value="1"><button id="delete" class="btn btn-light btn_remove"><a>X</a></button></div>');
+      $('#list').append('<div><input id="tags" class="ui-widget compostSearch" placeholder="Type Food..."><input class="number" type="number" min="1" max="10" value="1"><button id="delete" class="btn btn-light btn_remove"><a>X</a></button></div>');
     });
     $('body').on('click', '#delete', function(){
       $(this).parent('div').remove();
     });
+
+
+    $('#helpModal').modal('show');
+
+    $( function() {
+
+
+   var myPoints = 0;
+   if ("#tags"=="fruitItems") {
+     myPoints= points + 5;
+   }
+
+   document.getElementById("points").innerHTML = myPoints;
+
+
+/*
+    "Banana Peel", "Broccoli Stalk", "Cheese",
+     "Chopsticks", "Coffee Filter",
+     "Egg Shell", "Fish Skin", "Flour", "Jell-O", "Oatmeal", "Olive Pit",
+     "Potato Peel", "Rice", "Seeds", "Soup", "Strawberry Top"
+*/
+
+   $( "#tags" ).autocomplete({
+     minLength: 2,
+     source: food,
+      });
+   });
+
+   $('#submit').click(function(event,ui) {
+    alert("Item Added!");
   });
+
+  /*  $(function myPoints() {
+      var points;
+      var fruitItems = ["Apple Core", "Avocado Pit",
+          "Banana Peel", "Olive Pit", "Seeds", "Strawberry Top"];
+      var vegetableItems = ["Broccoli Stalk", "Potato Peel"] ;
+      var dairyItems = ["Cheese"];
+      var otherItems = ["Chopsticks", "Coffee Filter", "Coffee Grounds",
+          "Egg Shell", "Fish Skin", "Jell-O", "Oatmeal", "Rice", "Soup"]
+
+      if (food==fruitItems) {
+          points + 3 = points;
+      }
+    });  */
+
+ });
+/*
+  $( function() {
+      function log( message ) {
+        $( "<div>" ).text( message ).prependTo( "#log" );
+        $( "#log" ).scrollTop( 0 );
+      }
+
+      $( "#tags" ).autocomplete({
+        source: food,
+        minLength: 2,
+        select: function( event, ui ) {
+          log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+        }
+      });
+    } );
+*/
+
 </script>
 
 </body>
