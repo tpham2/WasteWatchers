@@ -1,41 +1,6 @@
-var simpleData = {'produce': 'Bananas',
-                  'producePic': 'images/bananas_coupons.jpg',
-                  'barcode': 'images/barcode.png',
-                  'expiration': 'January 1st, 2019',
-                  'index': 0};
-
-var complexData = [
-  {'produce': 'Oranges', 'producePic': 'images/oranges_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 1},
-  {'produce': 'Onions', 'producePic': 'images/onions_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 2},
-  {'produce': 'Apples', 'producePic': 'images/apples_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 3},
-  {'produce': 'Broccoli', 'producePic': 'images/broccoli_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 4},
-  {'produce': 'Carrots', 'producePic': 'images/carrots_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019','index': 5},
-  {'produce': 'Kiwis', 'producePic': 'images/kiwis_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 6},
-  {'produce': 'Pears', 'producePic': 'images/pears_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019','index': 7},
-  {'produce': 'Peaches', 'producePic': 'images/peaches_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 8},
-  {'produce': 'Corn', 'producePic': 'images/corn_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 9},
-  {'produce': 'Potatoes', 'producePic': 'images/potatoes_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 10},
-  {'produce': 'Celery', 'producePic': 'images/celery_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 11},
-  {'produce': 'Green Beans', 'producePic': 'images/green_beans_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 12},
-  {'produce': 'Cucumber', 'producePic': 'images/cucumber_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 13},
-  {'produce': 'Grapes', 'producePic': 'images/grapes_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 14},
-  {'produce': 'Asparagus', 'producePic': 'images/asparagus_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 15},
-  {'produce': 'Spinach', 'producePic': 'images/spinach_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 16},
-  {'produce': 'Strawberries', 'producePic': 'images/strawberries_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 17},
-  {'produce': 'Pineapples', 'producePic': 'images/pineapples_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 18},
-  {'produce': 'Watermelons', 'producePic': 'images/watermelon_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 19},
-  {'produce': 'Eggplants', 'producePic': 'images/eggplant_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 20},
-  {'produce': 'Cabbage', 'producePic': 'images/cabbage_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 21},
-  {'produce': 'Lettuce', 'producePic': 'images/lettuce_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 22},
-  {'produce': 'Honeydew', 'producePic': 'images/honeydew_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 23},
-  {'produce': 'Cantaloupe', 'producePic': 'images/cantaloupe_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 24},
-  {'produce': 'Mango', 'producePic': 'images/mango_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 25},
-  {'produce': 'Guava', 'producePic': 'images/guava_coupons.jpg', 'barcode': 'images/barcode.png','expiration': 'January 1st, 2019', 'index': 26}
-]
-
 var food = [
-  {'fruitItem': 'Apple Core', 'Points': '5'},
-  {'fruitItem': 'Avocado Pit', 'Points': '3'}
+  {"category": "fruitItems", "label": "Apple Core", "points": 5},
+    {"category": "fruitItems", "label": "Avocado Pit", "points": 3}
 ]
 
 $(document).ready(function(){
@@ -61,30 +26,37 @@ $(document).ready(function(){
       console.log("Incorrect username or password");
       }
 
-
-
-  /*compost*/
-      $.widget("ui.autocomplete", $.ui.autocomplete, {
-        options: {
-          messages: {
-            noResults: "",
-            results: function(amount){
-              return 1 }
-          }
-        },
-        __return: function(content){
-          this._close();
-        }
-
-
-      });
-
       $('#helpModal').modal('show');
 
       var food = ["Apple Core", "Avocado Pit", "Banana Peel",
       "Broccoli Stalk", "Cheese",
        "Chopsticks", "Egg Shell",
        "Potato Peel", "Strawberry Top"];
+
+       /*compost*/
+           $.widget("ui.autocomplete", $.ui.autocomplete, {
+             options: {
+               messages: {
+                 noResults: "",
+                 results: function(amount){
+                   return 1 }
+               }
+             },
+             __return: function(content){
+               this._close();
+             }
+
+
+           });
+
+       $( "#tags" ).autocomplete({
+              minLength: 2,
+              source: food,
+            });
+       /*
+       "Coffee Filter", "Fish Skin", "Flour", "Jell-O", "Oatmeal", "Olive Pit",
+       "Rice", "Seeds", "Soup",
+       */
 
        localStorage.setItem("foodItems", JSON.stringify(food));
        var foodItems = JSON.parse(localStorage.getItem('foodItems'));
@@ -182,82 +154,24 @@ $(document).ready(function(){
     compostInput.value = '';
        }
 
-  $( "#tags" ).autocomplete({
-       minLength: 2,
-       source: food,
-        });
+//login credentials
+localStorage.setItem('username','cogs120');
+localStorage.setItem('password','1234');
 
-/*
-  var source = $('#first-template').html();
+$('.signInButton').click(check);
+function check() {
+  var storedName = localStorage.getItem('username');
+  var storedPW = localStorage.getItem('password');
 
-  var template = Handlebars.compile(source);
+  var inputName = document.getElementById('userInput');
+  var inputPW = document.getElementById('userPW');
 
-  var parentDiv = $("#templatedStuff");
-
-  var html = template(simpleData);
-  console.log(html);
-  parentDiv.append(html);
-
-  for(var i = 0; i < complexData.length; i++){
-    var currData = complexData[i];
-    var currHtml = template(currData);
-    parentDiv.append(currHtml);
+  if(inputName.value == storedName && inputPW.value == storedPW){
+    console.log('Login successful!');
+    open("home_page.html", "_self")
+    return
   }
-
-  // Get the modal
-function createOpenModel(i) {
-  return function() {
-      var modal2 =  document.getElementById('myModal' + i);
-      modal2.style.display = "block";
-      modal = modal2;
-  }
+  console.log("Incorrect username or password");
 }
-var functions = [];
-
-for (var i = 0; i < complexData.length+1; i++) {
-  functions[i] = createOpenModel(i);
-}
-var modal = document.getElementById('myModal');
-// When the user clicks the button, open the modal
-for(var i = 0; i < complexData.length+1; i++){
-  var modalString = '#myModal' + i;
-$('#carousel' + i).click(functions[i]);
-}
-// When the user clicks on <span> (x), close the modal
-$('.close').click(closeModal);
-function closeModal(event){
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-$('.favorite').click(favoring)
-function favoring(){
-  $(this).find('img').toggle();
-}
-
-/*
-$('#saveCoupon').click(storeCoupon);
-function storeCoupon(event){
-
-}
-
-/*
-var myPoints = 0;
-$('#submit').click(addPoints);
-function addPoints(event){
-  for(var i = 0; i < food.length; i++){
-    var data = food[i];
-    if ( == 'fruitItem'){
-    var currItem = append('Points')
-}
-}
-*/
-
 
 });
