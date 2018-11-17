@@ -688,11 +688,9 @@ input.number {
   background: none;
   border: none;
 }
-.modal #helpModal {
-  position: fixed;
-}
+
 /* The Modal (background) */
-.modal {
+.coupons {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -762,8 +760,4 @@ input.number {
 
 #expiration{
   font-family: "Barlow Semi Condensed";
-}
-
-#unfavorite_star{
-  filter:grayscale(100%);
 }
