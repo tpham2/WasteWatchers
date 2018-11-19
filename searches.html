@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css" />
+	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
+	<script src="http://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
+-->
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <!-- jQuery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkm4ds0F2RrYg5nnw5DW5DYT59gicMqTk&callback=initMap" async defer></script>
+
+  <!-- Style -->
+  <link href="css/trashTalk.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
+
+
+</head>
+
+
+<body>
+
+  <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 2px;">
+    <p>WasteWatchers</p>
+
+      <div id="wrap">
+        <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="SEARCH...">
+        <input id="search_submit" value="Rechercher" type="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </form>
+      </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs active" href="home_page.html"><img src="images/home-green.png"><br>Home</a>
+    <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
+  </nav>
+
+  <div class="Header">
+  Search Results for Apple
+  </div>
+
+  <div>
+    <a class="produce_categories" href="apple.html">SHELF LIFE</a>
+    <a class="produce_categories" href="#">COUPON</a><a href="#"</a>
+  </div>
+
+  <!-- Modal Template -->
+  <script id="modal-template" type="text/x-handlebars-template">
+  <div id="myModal" class="modal content-center">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>{{produce}}</h2>
+      </div>
+      <div class="modal-body">
+          <a><img src="{{producePic}}" style="height:85px; margin-left: 61px;">
+          </a>
+      </div>
+      <div class="modal-footer image">
+        <a href="#" class="thumbnail">
+        <img src="{{barcode}}" style="width:45%; height: 45%; padding-top: 15px;">
+        <p id="expiration" style="text-align: center; font-size: 15px; padding-top: 20px; height: 10px;">{{expiration}}</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  </script>
+
+
+</body>
+</html>
