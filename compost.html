@@ -64,7 +64,7 @@
       <img src="images/compost_bin.png" class="btn btn-primary popUpBin" data-toggle="modal" data-target=".demo-popup">
       <img src="images/help.png" class="btn btn-primary help" data-toggle="modal" data-target=".demo-help">
       <!-- popup box modal starts here -->
-    <div class="modal fade demo-popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal fade demo-popup" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
@@ -80,8 +80,8 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="close cancel" data-dismiss="modal" aria-hidden="true"><a>Cancel</a></button>
-            <input id="submit" value="SUBMIT" type="button" class="close done" data-dismiss="modal" aria-hidden="true">
+            <button type="button" class="cancel" data-dismiss="modal"><a>Cancel</a></button>
+            <input id="submit" value="SUBMIT" type="button" class="done" data-dismiss="modal">
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -94,8 +94,8 @@
   <div class="container">
     <div class="row">
       <!-- popup box modal starts here -->
-    <div class="modal fade demo-help" tabindex="-1" role="dialog" id="helpModal">
-      <div class="modal-dialog modal-sm">
+    <div class="modal fade demo-help" role="dialog" id="helpModal">
+      <div class="modal-dialog modal-sm" style="margin: 130px 0px 0px 15px; width: 350px;">
         <div class="modal-content">
           <div class="modal-header">
             <a class="modal-title popUpHeading">Virtual Compost FAQs</a>
@@ -116,7 +116,7 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="close done" data-dismiss="modal" aria-hidden="true"><a>Got it!</a></button>
+            <button type="button" class="done" data-dismiss="modal" aria-hidden="true"><a>Got it!</a></button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

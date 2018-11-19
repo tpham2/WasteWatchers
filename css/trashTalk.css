@@ -601,10 +601,11 @@ input[type="submit"]:hover {
   font-size: 20px;
   font-family: "Barlow Semi Condensed";
 }
+
 .help {
   width: 50px;
   height: 40px;
-  margin: 430px 10px 0px 55px;
+  margin: 110px 10px 0px 280px;
   background: none;
   border: none;
   position: absolute;
@@ -613,16 +614,16 @@ input[type="submit"]:hover {
   font-weight: bold;
   font-size: 25px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .modal-sm{
-  margin: 150px 0px 0px 40px;
-  width: 300px;
+  margin: 200px 0px 0px 10px;
 }
 #tags {
   background: #f1f1f1;
   border: none;
-  margin: 10px 0px 10px 25px;
-  height: 30px;
+  margin: 30px 0px 10px 10px;
+  height: 35px;
   width: 150px;
   font-family: "Barlow Semi Condensed";
   font-size: 15px;
@@ -632,7 +633,7 @@ input[type="submit"]:hover {
   background: #f1f1f1;
   border: none;
   margin: 10px 0px 0px 25px;
-  height: 30px;
+  height: 40px;
   width: 150px;
   font-family: "Barlow Semi Condensed";
   font-size: 15px;
@@ -656,7 +657,7 @@ input.number {
   background: #f1f1f1;
   border: none;
   margin: 10px 0px 10px 10px;
-  height: 30px;
+  height: 35px;
   width: 40px;
   font-family: "Barlow Semi Condensed";
   font-size: 15px;
@@ -667,15 +668,16 @@ input.number {
   outline-color: #46A818;
 }
 .done {
-  font-size: 18px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 20px;
   color: #46A818;
-  background: #c4c4c4;
+  background: none;
+  border: none;
+  margin: 10px 10px 0px 0px;
 }
 .cancel {
-  font-size: 15px;
+  font-size: 18px;
   position: relative;
-  float: left;
-  margin-right: 100px;
 }
 #add {
   margin-left: 100px;
@@ -704,7 +706,7 @@ input.number {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content*/
 .modal-content {
     background-color: #fefefe;
     margin: auto;

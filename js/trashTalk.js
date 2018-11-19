@@ -26,7 +26,6 @@ $(document).ready(function(){
       console.log("Incorrect username or password");
       }
 
-      $('#helpModal').modal('show');
 
       var food = ["Apple Core", "Avocado Pit", "Banana Peel",
       "Broccoli Stalk", "Cheese",
@@ -139,7 +138,7 @@ $(document).ready(function(){
                console.log(pointValue);
                break;
              default:
-               console.log('unknown Item');
+               console.log('Unknown Item');
 
            }
            if (itemFound == true) {
