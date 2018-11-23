@@ -1,65 +1,66 @@
 <!doctype html>
 
-<html class="profile">
+<html>
 <head>
-  <title>Home Page</title>
+  <title>Search</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet">
-
-  <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">-->
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- Style -->
+  <script src="js/trashTalk.js"></script>
+  <!--<script src="js/handlebars-v4.0.12.js"></script>-->
+
+    <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
   <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
-  <link rel="stylesheet" href="css/circle.css">
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
-
+<!-- This will be the apps title banner and tabs-->
 <body>
 
   <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 35px;">
 
       <div id="wrap">
-        <a id="newTitle" style="font-size: 20px; font-weight: bold; padding-right: 120px;">Profile</a>
+        <a id="newTitle" style="font-size: 20px; font-weight: bold; padding-right: 125px;">Search</a>
         <input id="search" class="searchBar" type="text" placeholder="SEARCH...">
         <input id="search_submit" class="searchSubmit" type="button" value="submit">
         <img src="images/search-black.png" id="searchbtn">
       </div>
   </div>
 
+
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
     <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
     <a class="tabs" href="compost.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
-    <a class="tabs" href="home_page.html"><img src="images/home-black.png"><br>Home</a>
+    <a class="tabs active" href="search.html"><img src="images/search-black.png"><br>Search</a>
     <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
-    <a class="tabs active" href="profile.html"><img src="images/user-green.png"><br>Profile</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
   </nav>
 
 
+  <div class="trending" style="margin-top: 200px;">
+    <a style="font-weight: bold; font-size: 20px; margin: 0px 0px 0px 165px;">Trending</a>
 
-  <div class="profileStatus">
-    <img src="images/progress.jpg" style="width:55%; margin: 50px 0px 0px 0px;"><br>
-      Hi, COGS120!
-  </div>
-
-  <div class="profileList" style="margin-top: 0px;">
     <ul>
-      <li>Account <img src=images/light-grey-arrow.png class="profileArrow"></li>
-      <li><a href="help.html">Help <img src=images/light-grey-arrow.png class="profileArrow"></li>
-      <li>Sign Out</li>
+      <li>Apple</li>
+      <li>Banana</li>
     </ul>
   </div>
 
 
-</body>
 
+</body>
 </html>
+

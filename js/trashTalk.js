@@ -10,6 +10,12 @@ $(document).ready(function(){
     localStorage.setItem('password', '1234');
 
 
+    $("#userPW").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $('.signInButton').click();
+    }
+    });
+
     $('.signInButton').click(check);
     function check() {
       var storedName = localStorage.getItem('username');
@@ -20,19 +26,32 @@ $(document).ready(function(){
 
       if(inputName.value == storedName && inputPW.value == storedPW) {
         console.log('Login successful!');
-        open("home_page.html", "_self")
+        open("compost.html", "_self")
         return
       }
       console.log("Incorrect username or password");
       }
 
+//search bar
+      $("#wrap").click(extendSearch);
+      var newTitle = document.getElementById('newTitle');
+      function extendSearch() {
+        if (newTitle.style.display === "none") {
+          newTitle.style.display = "block";
+        } else {
+          newTitle.style.display = "none";
+   }
+   //newTitle.style.display = "none";
+      }
 
+
+      //Compost
       var food = ["Apple Core", "Avocado Pit", "Banana Peel",
       "Broccoli Stalk", "Cheese",
        "Chopsticks", "Egg Shell",
        "Potato Peel", "Strawberry Top"];
 
-       /*compost*/
+/*
            $.widget("ui.autocomplete", $.ui.autocomplete, {
              options: {
                messages: {
@@ -47,11 +66,42 @@ $(document).ready(function(){
 
 
            });
+*/
 
+$.widget( "ui.autocomplete", $.ui.autocomplete, {
+	options: {
+		messages: {
+			noResults: "",
+			results: function( amount ) {
+				return
+		}
+  }
+	},
+
+	__response: function( content ) {
+		var message;
+		this._superApply( arguments );
+		if ( this.options.disabled || this.cancelSearch ) {
+			return;
+		}
+		if ( content && content.length ) {
+      //console.log("good")
+      //message = this.options.messages.results( content.length );
+		} else {
+      //console.log("cool")
+			//message = this.options.messages.noResults;
+		}
+		//this.liveRegion.children().hide();
+		//$( "<div>" ).text( message ).appendTo( this.liveRegion );
+	}
+} );
+
+$( function() {
        $( "#tags" ).autocomplete({
               minLength: 2,
               source: food,
             });
+              } );
        /*
        "Coffee Filter", "Fish Skin", "Flour", "Jell-O", "Oatmeal", "Olive Pit",
        "Rice", "Seeds", "Soup",
@@ -148,29 +198,51 @@ $(document).ready(function(){
   totalValue=totalValue + pointValue;
   console.log("Total Value is " + totalValue);
   localStorage.setItem("myPoints", totalValue);
-  document.getElementById("myPoints").innerHTML = totalValue;
+  var finalValue = localStorage.getItem("myPoints");
+  document.getElementById("myPoints").innerHTML = finalValue;
 
     compostInput.value = '';
        }
 
-//login credentials
-localStorage.setItem('username','cogs120');
-localStorage.setItem('password','1234');
+  var finalValue = localStorage.getItem("myPoints");
+  document.getElementById("myPoints").innerHTML = finalValue;
 
-$('.signInButton').click(check);
-function check() {
-  var storedName = localStorage.getItem('username');
-  var storedPW = localStorage.getItem('password');
 
-  var inputName = document.getElementById('userInput');
-  var inputPW = document.getElementById('userPW');
 
-  if(inputName.value == storedName && inputPW.value == storedPW){
-    console.log('Login successful!');
-    open("home_page.html", "_self")
-    return
-  }
-  console.log("Incorrect username or password");
-}
+
+// Search function
+
+   var searchInput = document.getElementById("search");
+
+    searchInput.addEventListener("keydown", function (e) {
+        if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        console.log('hello');
+  $("#search_submit").click();
+        }
+    });
+
+    $('#search_submit').click(searchCheck);
+
+      function searchCheck() {
+        var itemFound = false;
+
+         switch (searchInput.value) {
+           case ("apple"):
+             console.log(searchInput.value);
+             itemFound = true;
+             open("appleSearchResult.html", "_self")
+             break;
+           case ("banana"):
+             console.log(searchInput.value);
+             itemFound = true;
+             open("searches2.html", "_self")
+             break;
+           default:
+             console.log('No Items Found');
+         }
+         searchInput.value = '';
+       }
+
+
 
 });
