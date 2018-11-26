@@ -35,6 +35,9 @@ var complexData = [
 
 $(document).ready(function(){
 
+  var finalValue = localStorage.getItem("myPoints");
+  document.getElementById("myPoints").innerHTML = finalValue;
+
 var source = $('#first-template').html();
 
 var template = Handlebars.compile(source);

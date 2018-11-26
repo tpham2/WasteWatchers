@@ -1,7 +1,3 @@
-var food = [
-  {"category": "fruitItems", "label": "Apple Core", "points": 5},
-    {"category": "fruitItems", "label": "Avocado Pit", "points": 3}
-]
 
 $(document).ready(function(){
 
@@ -51,61 +47,12 @@ $(document).ready(function(){
        "Chopsticks", "Egg Shell",
        "Potato Peel", "Strawberry Top"];
 
-/*
-           $.widget("ui.autocomplete", $.ui.autocomplete, {
-             options: {
-               messages: {
-                 noResults: "",
-                 results: function(amount){
-                   return 1 }
-               }
-             },
-             __return: function(content){
-               this._close();
-             }
 
-
-           });
-*/
-
-$.widget( "ui.autocomplete", $.ui.autocomplete, {
-	options: {
-		messages: {
-			noResults: "",
-			results: function( amount ) {
-				return
-		}
-  }
-	},
-
-	__response: function( content ) {
-		var message;
-		this._superApply( arguments );
-		if ( this.options.disabled || this.cancelSearch ) {
-			return;
-		}
-		if ( content && content.length ) {
-      //console.log("good")
-      //message = this.options.messages.results( content.length );
-		} else {
-      //console.log("cool")
-			//message = this.options.messages.noResults;
-		}
-		//this.liveRegion.children().hide();
-		//$( "<div>" ).text( message ).appendTo( this.liveRegion );
-	}
-} );
-
-$( function() {
        $( "#tags" ).autocomplete({
               minLength: 2,
               source: food,
             });
-              } );
-       /*
-       "Coffee Filter", "Fish Skin", "Flour", "Jell-O", "Oatmeal", "Olive Pit",
-       "Rice", "Seeds", "Soup",
-       */
+
 
        localStorage.setItem("foodItems", JSON.stringify(food));
        var foodItems = JSON.parse(localStorage.getItem('foodItems'));
@@ -235,7 +182,7 @@ $( function() {
            case ("banana"):
              console.log(searchInput.value);
              itemFound = true;
-             open("searches2.html", "_self")
+             open("bananaSearchResult.html", "_self")
              break;
            default:
              console.log('No Items Found');

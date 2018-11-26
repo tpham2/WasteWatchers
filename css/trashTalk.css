@@ -164,7 +164,7 @@ input[type="submit"]:hover {
 
 .navbar a.active {
   color: #46A818;
-  box-shadow: 0px 0px 10px 0px #C4C4C4;
+  /*box-shadow: 0px 0px 10px 0px #C4C4C4;*/
 }
 
 .main {
@@ -580,6 +580,7 @@ input[type="submit"]:hover {
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 40px;
 }
 
 .appleList li{
