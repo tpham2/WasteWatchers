@@ -22,7 +22,7 @@ $(document).ready(function(){
 
       if(inputName.value == storedName && inputPW.value == storedPW) {
         console.log('Login successful!');
-        open("compost.html", "_self")
+        open("compost2.html", "_self")
         return
       }
       console.log("Incorrect username or password");
