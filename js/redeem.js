@@ -45,7 +45,7 @@ var template = Handlebars.compile(source);
 var parentDiv = $("#templatedStuff");
 
 var html = template(simpleData);
-console.log(html);
+//console.log(html);
 parentDiv.append(html);
 
 for(var i = 0; i < complexData.length; i++){
