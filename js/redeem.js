@@ -55,7 +55,7 @@ for(var i = 0; i < complexData.length; i++){
 }
 
 // Get the modal
-function createOpenModel(i) {
+function createOpenModal(i) {
 return function() {
     var modal2 =  document.getElementById('myModal' + i);
     modal2.style.display = "block";
@@ -65,12 +65,11 @@ return function() {
 var functions = [];
 
 for (var i = 0; i < complexData.length+1; i++) {
-functions[i] = createOpenModel(i);
+functions[i] = createOpenModal(i);
 }
 var modal = document.getElementById('myModal');
 // When the user clicks the button, open the modal
 for(var i = 0; i < complexData.length+1; i++){
-var modalString = '#myModal' + i;
 $('#carousel' + i).click(functions[i]);
 }
 // When the user clicks on <span> (x), close the modal
@@ -89,6 +88,16 @@ window.onclick = function(event) {
 //Favoriting Function
 $('.favorite').click(favoring)
 function favoring(){
+  var modalFav = document.getElementById('favoriteCoupon');
+  var notModalFav = document.getElementById('notFavorite');
 $(this).find('img').toggle();
+/*
+if (event.target == notModalFav) {
+  notModalFav.style.display = "none";
+  modalFav.style.display = "inherit";
+if typeof(Storage) !== "undefined"{
+  localStorage.setItem('favCoupons', '')
+}
+}*/
 }
 });

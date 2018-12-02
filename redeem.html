@@ -55,14 +55,14 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2 style="text-align: center;">{{produce}}</h2>
+      <h2 type = "text" style="text-align: center;">{{produce}}</h2>
         <span class="favorite">
-          <img src="images/favorite_star.png" style="height: 32px; width: 32px; float: right; margin-top: 0px; filter: grayscale(100%);">
-          <img src="images/favorite_star.png" style="height: 32px; width: 32px; float: right; margin-top: 0px; display: none;">
+          <img id = "notFavorite" src="images/favorite_star.png" style="height: 38px; width: 32px; filter: grayscale(100%);">
+          <img id = "favoriteCoupon" src="images/favorite_star.png" style="height: 38px; width: 32px; display: none;">
         </span>
     </div>
     <div class="modal-body">
-        <a><img src="{{producePic}}" style="height:85px; margin-left: 61px;">
+        <a class="thumbnail"><img src="{{producePic}}" style="height:85px;">
         </a>
     </div>
     <div class="modal-footer image">
@@ -81,7 +81,8 @@
 
 </div>
 
-  <div class="Header" style="float: right; margin-top: 20px;">
+  <div class="Header" style="margin-top: 20px;">
+    <button class="btn btn-primary" id = "favorites" href="myCoupons.html">Favorites</button>
     <img src="images/compost-icon.png" style="width:20px;">
     <a style="font-size: 20px;">My Coins: </a><a style="font-size: 20px;"id="myPoints"></a>
   </div>
