@@ -5,7 +5,8 @@ $(document).ready(function(){
         function extendSearch() {
           if (newTitle.style.display === "none") {
             newTitle.style.display = "block";
-          } 
+            document.getElementById('search').blur();
+          }
           else {
             newTitle.style.display = "none";
           }
