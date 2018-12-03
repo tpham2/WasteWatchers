@@ -501,6 +501,20 @@ input[type="submit"]:hover {
    padding-top: 0px;
    position: relative;
  }
+
+ .myCoinsCounter{
+   position: absolute;
+   right: 0;
+ }
+ .myCoins{
+   position: fixed;
+   margin-left: 220px;
+ }
+ .myCoinsIcon{
+   position: fixed;
+   margin-left: 195px;
+   margin-top: 5px;
+ }
  .redeemCoins{
    font-family: "Barlow Semi Condensed";
    font-size: 20px;
