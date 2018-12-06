@@ -503,15 +503,15 @@ input[type="submit"]:hover {
  }
 
  .myCoinsCounter{
-   position: fixed;
+   position: absolute;
    right: 0;
  }
  .myCoins{
-   position: fixed;
+   position: absolute;
    margin-left: 220px;
  }
  .myCoinsIcon{
-   position: fixed;
+   position: absolute;
    margin-left: 195px;
    margin-top: 5px;
  }
