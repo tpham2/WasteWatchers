@@ -38,123 +38,45 @@ $(document).ready(function(){
   var finalValue = localStorage.getItem("myPoints");
   document.getElementById("myPoints").innerHTML = finalValue;
 
-var source = $('#first-template').html();
-
-var template = Handlebars.compile(source);
-
-var parentDiv = $("#templatedStuff");
-
-var html = template(simpleData);
-//console.log(html);
-parentDiv.append(html);
-
-for(var i = 0; i < complexData.length; i++){
-  var currData = complexData[i];
-  var currHtml = template(currData);
-  parentDiv.append(currHtml);
-}
-
-// Get the modal
-function createOpenModal(i) {
-return function() {
-    var modal2 =  document.getElementById('myModal' + i);
-    modal2.style.display = "block";
-    modal = modal2;
-}
-}
-var functions = [];
-
-for (var i = 0; i < complexData.length+1; i++) {
-functions[i] = createOpenModal(i);
-}
-var modal = document.getElementById('myModal');
-// When the user clicks the button, open the modal
-for(var i = 0; i < complexData.length+1; i++){
-$('#carousel' + i).click(functions[i]);
-}
-// When the user clicks on <span> (x), close the modal
-$('.close').click(closeModal);
-function closeModal(event){
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-      modal.style.display = "none";
-  }
-}
-
-//Favoriting Function
-$('.favorite').click(favoring)
-function favoring(){
-  var modalFav = document.getElementById('favoriteCoupon');
-  var notModalFav = document.getElementById('notFavorite');
-$(this).find('img').toggle();
-}
-//Adding Favorites to Local Storage
 $(function(){
-$('.addFavorite').on("click", function(){
-  try {
-    $(this).attr('disable', true);
+//  $(".favoriteBtn").on("click", function(){
+    console.log("Restoring array data from local storage");
+    myFavorites = JSON.parse(localStorage.getItem("favCoup"));
+    var source2 = $('#favoritesTemplate').html();
 
-    var addID = $(this).closest("span").attr("id");
+    var template2 = Handlebars.compile(source2);
 
-    var myFavorites=JSON.parse(localStorage.getItem("favCoup"));
+    var parentDiv2 = $("#placeholder");
 
-    if (myFavorites == null) {
-      myFavorites = [];
-    }
-
+    var html2 = template2(simpleData);
+    console.log(html2);
+    //parentDiv2.append(html2);
+//    var output = "<ul>";
     if (myFavorites != null) {
-      for (var i = 0; i < myFavorites.length; i++) {
-        if (addID == myFavorites[i]) {
-          alert("This Coupon is already in your favorites");
+      for(var x = 0; x < simpleData.length; x++){
+        for(var y = 0; y< myFavorites.length; y++){
+          if(simpleData[x].produce == myFavorites[j]) {
+            var currData3 = simpleData[i];
+            var currHtml3 = template2(currData3);
+            parentDiv2.append(currHtml3);
+          }
+        }
+      }
+
+      for (var i = 0; i < complexData.length; i++){
+        for (var j = 0; j < myFavorites.length; j++){
+          if(complexData[i].produce == myFavorites[j]) {
+            var currData2 = complexData[i];
+            var currHtml2 = template2(currData2);
+            parentDiv2.append(currHtml2);
+          }
         }
       }
     }
+//    output += "</ul>";
 
-    myFavorites.push(addID);
-
-    localStorage.setItem("favCoup", JSON.stringify(myFavorites));
-
-  }
-
-  catch(e) {
-    if (e==QUOTA_EXCEEDED_ERR) {
-      console.log("Error: Local Storage Limit Exceeded");
-    }
-
-    else {
-      console.log("Error: Saving to Local Storage");
-    }
-  }
-});
-});
-
-$(function(){
-$('.removeFavorite').on("click", function(){
-    $(this).attr('disable', true);
-
-    var removeID = $(this).closest("span").attr("id");
-
-    myFavorites=JSON.parse(localStorage.getItem("favCoup"));
-
-    if (myFavorites != null) {
-      for (var i = 0; i < myFavorites.length; i++) {
-        if (removeID == myFavorites[i]) {
-          alert("This Coupon has been removed");
-          delete myFavorites[i];
-          localStorage.setItem("favCoup", JSON.stringify(myFavorites));
-          myFavorites[i] = [];
-        }
-      }
-    }
-
-    if (myFavorites == null) {
-      alert("You have no favorite coupons");
-    }
-});
+  //  document.getElementById("placeholder").innerHTML = output;
+  //});
 });
 
 });

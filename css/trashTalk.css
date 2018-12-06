@@ -251,13 +251,13 @@ input[type="submit"]:hover {
       text-transform:uppercase;
     }
     .login-form .group .usernameInput {
-      margin-top: 35px;
+      margin-top: 0px;
       width:100%;
     	color: black;
     	display: inline-block;
       background: none;
       border:none;
-    	padding:15px 20px;
+    	padding:5px 20px;
       background: rgba(255,255,255,.1);
     }
     .login-form .group .passwordInput {
@@ -503,7 +503,7 @@ input[type="submit"]:hover {
  }
 
  .myCoinsCounter{
-   position: absolute;
+   position: fixed;
    right: 0;
  }
  .myCoins{
