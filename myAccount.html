@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>My Coupons</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/myCoupons.js"></script>
+  <script src="js/search.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/handlebars-v4.0.12.js"></script>
+
+  <!-- Style -->
+  <link href="css/trashTalk.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <div class="w3-container w3-card" style="background: rgba(70, 168, 24, 0.5); padding: 35px;">
+
+      <div id="wrap">
+        <a id="newTitle" style="font-size: 20px; font-weight: bold; padding-right: 110px;">Favorites</a>
+        <input id="search" class="searchBar" type="text" placeholder="SEARCH...">
+        <input id="search_submit" class="searchSubmit" type="button" value="submit">
+        <img src="images/search-black.png" id="searchbtn">
+      </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow" style="margin-bottom: 0px; padding: 7px 0px;">
+    <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
+    <a class="tabs" href="compost2.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
+    <a class="tabs active" href="redeem.html"><img src="images/shop-green.png"><br>Redeem</a>
+    <a class="tabs" href="profile.html"><img src="images/user-black.png"><br>Profile</a>
+  </nav>
+
+  <div class="Header" style="margin-top: 20px; margin-bottom: 80px;">
+    <img class="myCoinsIcon" src="images/compost-icon.png" style="width:20px;">
+    <a class="myCoins" style="font-size: 20px;">My Coins: </a><a class="myCoinsCounter" style="font-size: 20px;"id="myPoints"></a>
+  </div>
+
+  <script>
+  var finalValue = localStorage.getItem("myPoints");
+  document.getElementById("myPoints").innerHTML = finalValue;
+  </script>
+
+  </body>
+  </html>
