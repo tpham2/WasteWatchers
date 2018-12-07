@@ -86,37 +86,55 @@ window.onclick = function(event) {
 }
 
 //Favoriting Function
+
 $('.favorite').click(favoring)
-function favoring(){
-  var modalFav = document.getElementById('favoriteCoupon');
-  var notModalFav = document.getElementById('notFavorite');
+function favoring(e){
 $(this).find('img').toggle();
 }
+/*
+$('.favorite').click(function(e){
+   e.stopPropagation();
+});
+
+
+$('.favorite').toggle(
+   function(){
+      $(this).find('.addFavorite').css('display','inline');   //show request options
+   },function(){
+      $(this).find('.removeFavorite').css('display','inline');    //hide all request oprtions menus
+   }
+);*/
 //Adding Favorites to Local Storage
 $(function(){
 $('.addFavorite').on("click", function(){
   try {
-    $(this).attr('disable', true);
+    //$(this).attr('disable', true);
 
     var addID = $(this).closest("span").attr("id");
+    var favoriteOff = $('.addFavorite').attr('disable', true);
+    var favoriteOn = $('.removeFavorite').attr('disable', true);
 
     var myFavorites=JSON.parse(localStorage.getItem("favCoup"));
+    var favoriteStatus=JSON.parse(localStorage.getItem("favToggle"));
 
     if (myFavorites == null) {
       myFavorites = [];
+      favoriteStatus.push(favoriteOff);
     }
 
     if (myFavorites != null) {
       for (var i = 0; i < myFavorites.length; i++) {
         if (addID == myFavorites[i]) {
-          alert("This Coupon is already in your favorites");
+          if (favoriteOn != favoriteStatus[i])
+          favoriteStatus.push(favoriteOn);
+          return;
         }
       }
     }
-
     myFavorites.push(addID);
 
     localStorage.setItem("favCoup", JSON.stringify(myFavorites));
+    localStorage.setItem("favToggle", JSON.stringify(favoriteStatus));
 
   }
 
@@ -134,26 +152,37 @@ $('.addFavorite').on("click", function(){
 
 $(function(){
 $('.removeFavorite').on("click", function(){
-    $(this).attr('disable', true);
+    //$(this).attr('disable', true);
 
     var removeID = $(this).closest("span").attr("id");
+    favoriteOff = $('.addFavorite').attr('disable', true);
+    favoriteOn = $('.removeFavorite').attr('disable', true);
 
     myFavorites=JSON.parse(localStorage.getItem("favCoup"));
+    favoriteStatus=JSON.parse(localStorage.getItem("favToggle"));
 
     if (myFavorites != null) {
       for (var i = 0; i < myFavorites.length; i++) {
         if (removeID == myFavorites[i]) {
+          if (favoriteOff != favoriteStatus[i])
           alert("This Coupon has been removed");
+          favoriteStatus.push(favoriteOff);
           delete myFavorites[i];
           localStorage.setItem("favCoup", JSON.stringify(myFavorites));
           myFavorites[i] = [];
+          return;
         }
       }
     }
 
     if (myFavorites == null) {
+      favoriteStatus.push(favoriteOff);
       alert("You have no favorite coupons");
+
     }
+
+    localStorage.setItem("favToggle", JSON.stringify(favoriteStatus));
+
 });
 });
 
