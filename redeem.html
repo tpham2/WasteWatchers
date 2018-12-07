@@ -55,14 +55,14 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2 style="text-align: center;">{{produce}}</h2>
-        <span class="favorite">
-          <img src="images/favorite_star.png" style="height: 50%; width: 50%; float: right; margin-top: 0px; filter: grayscale(100%);">
-          <img src="images/favorite_star.png" style="height: 50%; width: 50%; float: right; margin-top: 0px; display: none;">
-        </span>
+      <h2 type = "text" style="text-align: center; font-family: 'Barlow Semi Condensed';">{{produce}}</h2>
+        <!--<span class="favorite" id = "{{produce}}">
+          <img class = "addFavorite" id = "notFavorite" src="images/favorite_star.png" style="height: 38px; width: 32px; filter: grayscale(100%);">
+          <img class = "removeFavorite" id = "favoriteCoupon" src="images/favorite_star.png" style="height: 38px; width: 32px; display: none;">
+        </span>-->
     </div>
     <div class="modal-body">
-        <a><img src="{{producePic}}" style="height:85px; margin-left: 61px;">
+        <a class="thumbnail"><img src="{{producePic}}" style="height:105px;">
         </a>
     </div>
     <div class="modal-footer image">
@@ -81,14 +81,15 @@
 
 </div>
 
-  <div class="Header" style="float: right; margin-top: 20px;">
-    <img src="images/compost-icon.png" style="width:20px;">
-    <a style="font-size: 20px;">My Coins: </a><a style="font-size: 20px;"id="myPoints"></a>
+  <div class="Header" style="margin-top: 20px;">
+    <!--<a class="favoriteBtn btn btn-primary" href="myCoupons.html">Favorites<a/>-->
+    <img class="myCoinsIcon" src="images/compost-icon.png" style="width:20px;">
+    <a class="myCoins" style="font-size: 20px;">My Coins: </a><a class="myCoinsCounter" style="font-size: 20px;"id="myPoints"></a>
   </div>
 
-  <br><br>
+  <br>
 
-  <div class="redeemCoins" style="margin-left: 8px;">
+  <div class="redeemCoins" style="margin-top: 10px; margin-left: 8px;">
     <img src="images/compost-icon.png" style="width: 20px;">
     30
   </div>

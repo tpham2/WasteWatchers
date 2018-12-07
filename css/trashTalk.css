@@ -53,7 +53,7 @@ a {
   right: 5px;
 }
 
-input[type="text"] {
+#search {
   height: 27px;
   font-size: 13px;
   display: inline-block;
@@ -73,11 +73,12 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="text"]:focus:hover {
+#search:focus:hover {
   border-bottom: 1px solid black;
 }
 
-input[type="text"]:focus {
+
+#search:focus {
   width: 300px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
@@ -89,16 +90,7 @@ input[type="text"]:focus {
   transition: none;
 }
 
-.trending li{
-  font-family: "Barlow Semi Condensed";
-  font-size: 15px;
-  padding: 5px;
-  margin-left: 30px;
-  text-align: center;
-  border-bottom:1px solid rgba(70, 168, 24, 0.5);
-  width: 250px;
-  list-style-type: none;
-}
+
 /*
 input[type="submit"] {
   height: 27px;
@@ -244,26 +236,29 @@ input[type="submit"]:hover {
       text-transform:uppercase;
     }
     .login-form .group .passwordLabel {
-      margin-top: 25px;
+      margin-top: 0px;
       font-family: "Barlow Semi Condensed";
       font-size: 12px;
       text-transform:uppercase;
     }
     .login-form .group .usernameInput {
-      margin-top: 35px;
+      margin-top: 0px;
       width:100%;
     	color: black;
     	display: inline-block;
+      font-family: "Barlow Semi Condensed";
       background: none;
       border:none;
-    	padding:15px 20px;
+    	padding:5px 20px;
       background: rgba(255,255,255,.1);
+      outline: none;
     }
     .login-form .group .passwordInput {
       margin-top: 0px;
       width:100%;
       color: black;
       display: inline-block;
+      font-family: "Barlow Semi Condensed";
       background: none;
       border:none;
     	padding:5px 20px;
@@ -287,6 +282,7 @@ input[type="submit"]:hover {
       width:100%;
       color: black;
       display: inline-block;
+      font-family: "Barlow Semi Condensed";
       background: none;
       border:none;
     	padding:5px 20px;
@@ -294,14 +290,16 @@ input[type="submit"]:hover {
       outline: none;
     }
     .login-form .group .emailInput {
-      margin-top: 250px;
+      margin-top: 0px;
       width:100%;
       color: black;
       display: inline-block;
+      font-family: "Barlow Semi Condensed";
       background: none;
       border:none;
-    	padding:15px 20px;
+    	padding:5px 20px;
       background: rgba(255,255,255,.1);
+      outline: none;
     }
     .login-form .group .signUpButton {
       background-color: black;
@@ -312,7 +310,7 @@ input[type="submit"]:hover {
       font-family: "Barlow Semi Condensed";
       font-size: 15px;
       text-transform:uppercase;
-      margin: 40px 60px;
+      margin: 20px 60px;
       cursor: pointer;
     }
     .login-form .group .button{
@@ -498,6 +496,21 @@ input[type="submit"]:hover {
    font-weight: bold;
    margin: 10px 30px 0px 30px;
    padding-top: 0px;
+   position: relative;
+ }
+
+ .myCoinsCounter{
+   position: absolute;
+   right: 0;
+ }
+ .myCoins{
+   position: absolute;
+   margin-left: 220px;
+ }
+ .myCoinsIcon{
+   position: absolute;
+   margin-left: 195px;
+   margin-top: 5px;
  }
  .redeemCoins{
    font-family: "Barlow Semi Condensed";
@@ -603,7 +616,7 @@ input[type="submit"]:hover {
   background: none;
   border: none;
   position: absolute;
-  margin: 150px 0px 0px 40px;
+  margin: 145px 0px 0px 40px;
 }
 .compostHeader {
   position: absolute;
@@ -695,6 +708,7 @@ input.number {
 .cancel {
   font-size: 18px;
   position: relative;
+  border: 1px black;
 }
 #add {
   margin-left: 100px;
@@ -733,20 +747,28 @@ input.number {
 }
 
 .modal-header h2{
-    margin-right: 15px;
-    margin-left: 63px;
+    padding-right: 0px;
+    padding-left: 0px;
+    position: relative;
 }
 
 .modal-header{
+  position: relative;
   padding:0px;
   margin:0px;
 }
 
 .modal-header .close{
+  position: absolute;
     margin: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
     padding: 0px;
+    left: 0;
+}
+
+.modal-header .favorite{
+    position: absolute;
+    right: 0;
+    margin-top: 8.5px
 }
 
 .modal-footer{
@@ -762,7 +784,10 @@ input.number {
     float: left;
     font-size: 28px;
     font-weight: bold;
-    margin-left: 20px;
+}
+
+.favorite{
+  margin-right: 0px;
 }
 
 .close:hover,
@@ -772,11 +797,22 @@ input.number {
     cursor: pointer;
 }
 
-.thumbnail {
+.modal-footer .thumbnail {
   border: 0px;
   margin-top: 10px;
 }
 
+.modal-body .thumbnail{
+  padding: 0px;
+  margin-bottom: 0px;
+  border: 0px;
+}
+
 #expiration{
   font-family: "Barlow Semi Condensed";
+}
+
+.favoriteBtn{
+  position: absolute;
+  left: 0;
 }
