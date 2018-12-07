@@ -1,32 +1,6 @@
 
 $(document).ready(function(){
 
-  //login credentials
-    localStorage.setItem('username', 'cogs120');
-    localStorage.setItem('password', '1234');
-
-
-    $("#userPW").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $('.signInButton').click();
-    }
-    });
-
-    $('.signInButton').click(check);
-    function check() {
-      var storedName = localStorage.getItem('username');
-      var storedPW = localStorage.getItem('password');
-
-      var inputName = document.getElementById('userInput');
-      var inputPW = document.getElementById('userPW');
-
-      if(inputName.value == storedName && inputPW.value == storedPW) {
-        console.log('Login successful!');
-        open("compost2.html", "_self")
-        return
-      }
-      console.log("Incorrect username or password");
-      }
 
 //search bar
       $("#wrap").click(extendSearch);
@@ -150,6 +124,7 @@ $(document).ready(function(){
   document.getElementById("myPoints").innerHTML = finalValue;
 
     compostInput.value = '';
+    compostNumber.value = '1';
        }
 
   var finalValue = localStorage.getItem("myPoints");

@@ -8,13 +8,12 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <!-- jQuery -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/search.js"></script>
-  <!--<script src="js/handlebars-v4.0.12.js"></script>-->
 
     <!-- Style -->
   <link href="css/trashTalk.css" rel="stylesheet">
@@ -23,7 +22,6 @@
   <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
 
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
 <!-- This will be the apps title banner and tabs-->
@@ -40,7 +38,7 @@
   </div>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow" style="margin-bottom: 0px;">
     <a class="tabs" href="shelf_life.html"><img src="images/clock-black.png"><br>Shelf Life</a>
     <a class="tabs" href="compost2.html"><img src="images/compost-black.png" style="height:17px"><br>Compost</a>
     <a class="tabs" href="redeem.html"><img src="images/shop-black.png"><br>Redeem</a>
@@ -52,11 +50,45 @@
   </div>
 
   <div>
-    <a class="produce_categories" href="apple.html">SHELF LIFE</a>
-    <a class="produce_categories" href="#">COUPON</a><a href="#"</a>
+    <a class="produce_categories" href="appleShelfSearch.html">SHELF LIFE</a>
+    <a class="produce_categories" data-toggle="modal" data-target=".appleCoupon" style="color: white;">COUPON</a>
   </div>
 
+  <div id="appleCoupon" class="modal appleCoupon content-center" style="padding-top: 100px;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" data-dismiss="modal">&times;</span>
+      <h2 type="text" style="font-family: Barlow Semi Condensed;">Apples</h2>
+        <span class="favorite">
+          <img id = "notFavorite" src="images/favorite_star.png" style="height: 38px; width: 32px; filter: grayscale(100%);">
+          <img id = "favoriteCoupon" src="images/favorite_star.png" style="height: 38px; width: 32px; display: none;">
+        </span>
+    </div>
+    <div class="modal-body">
+        <a class="thumbnail"><img src="images/apples_coupons.jpg" style="height:105px;">
+        </a>
+        <div class="redeemCoins" style="margin-left: 88px; padding-bottom:0px;">
+          <img src="images/compost-icon.png" style="width: 20px;">
+          30
+        </div>
+    </div>
+    <div class="modal-footer image">
+      <a href="#" class="thumbnail">
+      <img src="images/barcode.png" style="width:45%; height: 45%; padding-top: 15px;">
+      <p id="expiration" style="text-align: center; font-size: 15px; padding-top: 20px; height: 10px;">Expires: January 1st, 2019</p>
+      </a>
+    </div>
+  </div>
+</div>
 
-
+<script>
+$('.favorite').click(favoring)
+function favoring(){
+  var modalFav = document.getElementById('favoriteCoupon');
+  var notModalFav = document.getElementById('notFavorite');
+$(this).find('img').toggle();
+}
+</script>
 </body>
 </html>
+

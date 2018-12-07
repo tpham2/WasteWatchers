@@ -78,8 +78,27 @@
 
           <div class="modal-footer">
             <button type="button" class="cancel" data-dismiss="modal"><a>Cancel</a></button>
-            <input id="submit" value="SUBMIT" type="button" class="done" data-dismiss="modal">
+            <input id="submit" value="SUBMIT" type="button" class="done" data-dismiss="modal" data-toggle="modal" data-target=".demo-success">
           </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-->
+    <!-- popup box modal ends -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
+  <div class="container">
+    <div class="row">
+      <!-- popup box modal starts here -->
+    <div class="modal fade demo-success" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm" style="margin-top:250px;">
+        <div class="modal-content">
+
+          <div class="modal-body">
+            <img src="images/success.png" style="width:40px; padding: 5px;">
+            <a style="font-weight: bold; font-size: 20px;">Successfully Added Items</a>
+          </div>
+
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal-->
@@ -92,24 +111,24 @@
     <div class="row">
       <!-- popup box modal starts here -->
     <div class="modal fade demo-help" role="dialog" id="helpModal">
-      <div class="modal-dialog modal-sm" style="margin: 130px 0px 0px 15px; width: 350px;">
+      <div class="modal-dialog modal-sm" style="margin:140px 0px 0px 20px; width:350px;">
         <div class="modal-content">
           <div class="modal-header">
             <a class="modal-title popUpHeading">Virtual Compost FAQs</a>
           </div>
 
           <div class="modal-body">
-            <a style="font-weight: bold;">What is Compost?</a>
-            <br>
-            <a> Organic material that can be added to soil to help plants grow.
-              Making compost keeps these materials out of landfills where they take up space and release methane, a potent greenhouse gas.
-            </a>
-            <br><br>
+
             <a style="font-weight: bold;">How do I use the Virtual Compost?</a>
             <br>
-            <a> Tap on the Virtual Bin to add your compost items.
-              With each item you compost, you accumulate points which you can later redeem for coupons at the grocery store.
+            <a> Tap on the bin to add your compost items. Each item will earn you a certain number of coins.
             </a>
+            <br><br>
+            <a style="font-weight: bold;">What can I do with my coins?</a>
+            <br>
+            <a> As you accumulate coins with every item you compost, you can redeem those coins for coupons of food items at the grocery store.
+            </a>
+
           </div>
 
           <div class="modal-footer">
@@ -124,4 +143,3 @@
 
 </body>
 </html>
-
